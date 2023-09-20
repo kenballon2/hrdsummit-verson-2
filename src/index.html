@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#a47cf4">
+    <meta name="description" content="HRD Summit Melbourne">
+    <title>HRD Summit Melbourne</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <!-- slickjs css -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- custom javascript -->
+    <script src="./src/scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-nav-wrapper container">
+            <div class="navbar-brand logo-wrapper">
+                <picture>
+                    <img src="./src/assets/images/HRSM23-white.png" width="200" height="100%"
+                        alt="HRD Summit Logo Image" loading="lazy">
+                </picture>
+            </div>
+            <div class="nav-sponsor-wrapper">
+                <nav class="navbar navbar-light ms-auto gap-4 d-hide-on-sm">
+                    <ul class="navbar-nav flex-row gap-4 ">
+                        <li class="nav-item"><a href="#agendaSection" class="nav-link">Agenda</a></li>
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
+                        <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Get In Touch</a></li>
+                    </ul>
+                    <div class="cta-btn-wrapper d-hide-on-sm">
+                        <a href="#" class="btn btn-secondary cta-secondary" data-bs-toggle="modal"
+                            data-bs-target="#becomeSponsor">Become a sponsor</a>
+                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register Now</a>
+                    </div>
+                </nav>
+                <div class="event-partner-logo-container d-hide-on-sm">
+                    <span class="heading-title">Event Partner</span>
+                    <img src="./src/assets/images/talogy-logo-white.png" alt="sponsor logo image" loading="lazy">
+                </div>
+                <div class="event-partner-logo-container show-on-tablet">
+                    <span class="heading-title">Event Partner</span>
+                    <img class="logo-white" src="./src/assets/images/talogy-logo-white.png" alt="sponsor logo image"
+                        loading="lazy">
+                </div>
+                <!-- show on small devices -->
+                <div class="mobile-menu-wrapper">
+                    <button aria-label="Open Navigation" tabindex="0" class="nav-toggle" id="openCloseMobileNav">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 25" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--menu">
+                            <path d="M0 .5h45"></path>
+                            <path d="M0 12.5h45"></path>
+                            <path d="M0 24.5h45"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--close">
+                            <path d="M24.293 1.354.716 24.931"></path>
+                            <path d="m.354.646 23.577 23.578"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu nav links -->
+        <div class="navigation-links-parent">
+            <div class="mobile-menu-container d-flex flex-column">
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-item-mobile"><a href="#agendaSection" class="nav-link">Agenda</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Speakers</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Sponsors</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Get In Touch</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Become a Sponsor</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Register Now</a></li>
+                </ul>
+                <div class="social-menu-wrapper">
+                    <ul class="sm-social-list-wrapper flex-wrap gap-3">
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                LinkedIn
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Twitter/X
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Youtube
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Facebook
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- this ui block only shows on mobile -->
+        <div class="event-partner-logo-container show-on-mobile">
+            <span class="heading-title">Event Partner</span>
+            <img class="logo-default-color" src="./src/assets/images/talogy-logo.png" alt="sponsor logo image"
+                loading="lazy">
+        </div>
+        <!-- hero section -->
+        <section class="hero-section" style="background-image: url('./src/assets/images/HRSM_hero_bg.jpg');">
+            <div class="hero__inner-div-wrapper container">
+                <div class="hero-details-wrapper">
+                    <div class="hero__date-wrapper">
+                        <span class="hero__date-label text-white text-capitalize">July 26-27, 2023 | Crown Conference
+                            Center</span>
+                    </div>
+                    <div class="hero__div-wrapper d-flex">
+                        <div>
+                            <h1 class="hero__heading-label text-white text-capitalize">People-first leadership for the
+                                new world of work</h1>
+                        </div>
+                        <div class="sub-header-wrapper pt-2">
+                            <h2 class="hero__subheading-label text-white">Navigate hybrid work, talent retention and
+                                digital transformation to drive positive
+                                change in your organisation</h2>
+
+                            <div class="discount-cta-wrapper">
+                                <div class="discount-lable-toggle">
+                                    <span class="discount-label">Save 50% on Tickets</span>
+                                    <span class="discount-sublabel text-white">Save 50% on Tickets</span>
+                                </div>
+                                <div class="cta-wrapper d-flex gap-3 flex-wrap">
+                                    <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                                        data-bs-target="#registerModal">Register Now</a>
+                                    <a href="#" class="btn btn-secondary cta-secondary d-lg-none" data-bs-toggle="modal"
+                                        data-bs-target="#becomeSponsor">Become a Sponsor</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-wrapper d-flex d-hide-on-mxs ">
+                    <div class="d-flex">
+                        <div class="stat-dets">
+                            <span class="stat-num text-white">40</span>
+                            <span class="stat-bottom-label">speakers</span>
+                        </div>
+                        <div class="stat-dets">
+                            <span class="stat-num text-white">15</span>
+                            <span class="stat-bottom-label">Delegates</span>
+                        </div>
+                        <div class="stat-dets">
+                            <span class="stat-num text-white">2.5K</span>
+                            <span class="stat-bottom-label">Attendance in counting</span>
+                        </div>
+                        <div class="stat-dets">
+                            <span class="stat-num text-white">50</span>
+                            <span class="stat-bottom-label">other stats</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summit-art-svg-wrapper d-hide-on-mxs ">
+                    <img src="./src/assets/images/summit-hero-svg-text.svg" alt="svg art">
+                </div>
+            </div>
+        </section>
+        <!-- hero section stats that only shows on mobile -->
+        <section class="hero-section__stats-wrapper">
+            <div>
+                <div class="summit-art-svg-wrapper-mobile">
+                    <img src="./src/assets/images/summit-hero-svg-text.svg" alt="">
+                </div>
+                <div class="stats-mobile-overlap">
+                    <div class="stats-wrapper-mobile-show">
+                        <div class="">
+                            <div class="stat-dets">
+                                <span class="stat-bottom-label">speakers</span>
+                                <span class="stat-num text-white">40</span>
+                            </div>
+                            <div class="stat-dets">
+                                <span class="stat-bottom-label">Delegates</span>
+                                <span class="stat-num text-white">15</span>
+                            </div>
+                            <div class="stat-dets">
+                                <span class="stat-bottom-label">Attendance in counting</span>
+                                <span class="stat-num text-white">2.5K</span>
+                            </div>
+                            <div class="stat-dets">
+                                <span class="stat-bottom-label">other stats</span>
+                                <span class="stat-num text-white">50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- announcement section -->
+        <section class="announcement-section">
+            <div class="container py-7">
+                <h2 class="display-5 text-white fw-bold text-center">Announcement</h2>
+                <div class="announcement-slider-parent d-flex align-items-center justify-content-center">
+                    <div class="announcement-card-wrapper">
+                        <!-- php repeatable slides -->
+                        <div class="announce__card-slide d-grid">
+                            <div class="announce__details-ctas d-flex flex-column">
+                                <div class="heading-title-sponsor-wrapper">
+                                    <h3>Mark Your Calendars: Just 26 Days to Go</h3>
+                                    <div class="sponsor-wrapper">
+                                        <span class="sponsor-label">Sponsored By:</span>
+                                        <img src="/src/assets/images/sponsor-fa.png" alt="Sponsor's Logo">
+                                    </div>
+                                    <div class="short-blurb">
+                                        <p>Get Ready for HR Summit 2023, We are thrilled to announce that the HR Summit
+                                            2023
+                                            is
+                                            right around the corner! Get ready
+                                            for an unparalleled experience that will reshape the way you think about
+                                            Human
+                                            Resources and empower you to drive
+                                            transformative change within your organizations.</p>
+                                    </div>
+                                    <div class="ui-block-component-show-on-sm d-hide-on-large">
+                                        <div class="announce__img-wrapper ui-block-component">
+                                            <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                            <div class="hrd-label">
+                                                <div class="hrd-label__line"></div>
+                                                <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                            </div>
+                                            <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                                <div class="small-lbl-date text-white">July 26, 2023</div>
+                                                <div class="small-lbl-slide-number text-white display-3 fw-bold">01
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="ctas-wrapper d-flex gap-3">
+                                    <a href=""
+                                        class="btn btn-primary cta-primary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Register Now</div>
+                                        <div class="right-arrow-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.4 21.6L13.2 20.4L20.754 12.846L0.846 12.846V11.154L20.754 11.154L13.2 3.6L14.4 2.4L24 12L14.4 21.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href=""
+                                        class="btn btn-secondary cta-tertiary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Venue</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- below html ui block can be component to be reusable to other ui container -->
+                            <div class="announce__img-wrapper ui-block-component d-hide-on-sm">
+                                <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                <div class="hrd-label">
+                                    <div class="hrd-label__line"></div>
+                                    <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                </div>
+                                <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                    <div class="small-lbl-date text-white">July 26, 2023</div>
+                                    <div class="small-lbl-slide-number text-white display-3 fw-bold">01</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="announce__card-slide d-grid">
+                            <div class="announce__details-ctas d-flex flex-column">
+                                <div class="heading-title-sponsor-wrapper">
+                                    <h3>Mark Your Calendars: Just 26 Days to Go</h3>
+                                    <div class="sponsor-wrapper">
+                                        <span class="sponsor-label">Sponsored By:</span>
+                                        <img src="/src/assets/images/sponsor-fa.png" alt="Sponsor's Logo">
+                                    </div>
+                                    <div class="short-blurb">
+                                        <p>Get Ready for HR Summit 2023, We are thrilled to announce that the HR Summit
+                                            2023
+                                            is
+                                            right around the corner! Get ready
+                                            for an unparalleled experience that will reshape the way you think about
+                                            Human
+                                            Resources and empower you to drive
+                                            transformative change within your organizations.</p>
+                                    </div>
+                                    <div class="ui-block-component-show-on-sm d-hide-on-large">
+                                        <div class="announce__img-wrapper ui-block-component">
+                                            <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                            <div class="hrd-label">
+                                                <div class="hrd-label__line"></div>
+                                                <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                            </div>
+                                            <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                                <div class="small-lbl-date text-white">July 26, 2023</div>
+                                                <div class="small-lbl-slide-number text-white display-3 fw-bold">02
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="ctas-wrapper d-flex gap-3">
+                                    <a href=""
+                                        class="btn btn-primary cta-primary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Register Now</div>
+                                        <div class="right-arrow-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.4 21.6L13.2 20.4L20.754 12.846L0.846 12.846V11.154L20.754 11.154L13.2 3.6L14.4 2.4L24 12L14.4 21.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href=""
+                                        class="btn btn-secondary cta-tertiary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Venue</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- below html ui block can be component to be reusable to other ui container -->
+                            <div class="announce__img-wrapper ui-block-component d-hide-on-sm">
+                                <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                <div class="hrd-label">
+                                    <div class="hrd-label__line"></div>
+                                    <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                </div>
+                                <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                    <div class="small-lbl-date text-white">July 26, 2023</div>
+                                    <div class="small-lbl-slide-number text-white display-3 fw-bold">02</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="announce__card-slide d-grid">
+                            <div class="announce__details-ctas d-flex flex-column">
+                                <div class="heading-title-sponsor-wrapper">
+                                    <h3>Mark Your Calendars: Just 26 Days to Go</h3>
+                                    <div class="sponsor-wrapper">
+                                        <span class="sponsor-label">Sponsored By:</span>
+                                        <img src="/src/assets/images/sponsor-fa.png" alt="Sponsor's Logo">
+                                    </div>
+                                    <div class="short-blurb">
+                                        <p>Get Ready for HR Summit 2023, We are thrilled to announce that the HR Summit
+                                            2023
+                                            is
+                                            right around the corner! Get ready
+                                            for an unparalleled experience that will reshape the way you think about
+                                            Human
+                                            Resources and empower you to drive
+                                            transformative change within your organizations.</p>
+                                    </div>
+                                    <div class="ui-block-component-show-on-sm d-hide-on-large">
+                                        <div class="announce__img-wrapper ui-block-component">
+                                            <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                            <div class="hrd-label">
+                                                <div class="hrd-label__line"></div>
+                                                <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                            </div>
+                                            <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                                <div class="small-lbl-date text-white">July 26, 2023</div>
+                                                <div class="small-lbl-slide-number text-white display-3 fw-bold">03
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="ctas-wrapper d-flex gap-3">
+                                    <a href=""
+                                        class="btn btn-primary cta-primary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Register Now</div>
+                                        <div class="right-arrow-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.4 21.6L13.2 20.4L20.754 12.846L0.846 12.846V11.154L20.754 11.154L13.2 3.6L14.4 2.4L24 12L14.4 21.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href=""
+                                        class="btn btn-secondary cta-tertiary rounded-0 d-flex align-items-center gap-3 justify-content-center">
+                                        <div class="btn-label">Venue</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- below html ui block can be component to be reusable to other ui container -->
+                            <div class="announce__img-wrapper ui-block-component d-hide-on-sm">
+                                <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                <div class="hrd-label">
+                                    <div class="hrd-label__line"></div>
+                                    <span class="hrd-label__text text-white">HRD Summit 2023</span>
+                                </div>
+                                <div class="bottom-lbl-wrapper d-flex justify-content-between">
+                                    <div class="small-lbl-date text-white">July 26, 2023</div>
+                                    <div class="small-lbl-slide-number text-white display-3 fw-bold">03</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="sponsors-sec">
+            <div class="container container-md">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="display-4 fw-bold mb-4">Sponsors</h2>
+                        <p class="lead">See our partners and sponsors during this event to give you the best experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="sponsor-heading-row row">
+                    <div class="col-12 text-center">
+                        <h3 class="display-6 fw-bold">Event Partner</h3>
+                    </div>
+                </div>
+                <div class="sponsors-row row row-cols-1 row-cols-md-3 justify-content-center">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-caasa.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sponsor-heading-row row">
+                    <div class="col-12 text-center">
+                        <h3 class="display-6 fw-bold">Gold Sponsor</h3>
+                    </div>
+                </div>
+                <div class="sponsors-row row row-cols-1 row-cols-md-3 justify-content-center">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-caasa.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-gi.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/talogy-logo.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-hermann.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-fa.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-wealhouse.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-caasa.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Card title</h5> -->
+                            </div>
+                            <img src="./src/assets/images/sponsor-gi.png" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sponsors-cta-row row">
+                    <div class="col-12 text-center">
+                        <h3 class="display-5 mb-4 text-white">Become Our Sponsors</h3>
+                        <div>
+                            <a href="#" class="btn btn-secondary cta-secondary w-auto" data-bs-toggle="modal"
+                                data-bs-target="#becomeSponsor">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-cta-sec">
+            <div class="container">
+                <div class="newsletter-cta-row row align-items-center">
+                    <div class="col-lg-6">
+                        <h3 class="display-6 mb-4 text-white">Stay up-to-date on all things HRD Summit Events</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-lg-8">
+                                    <input type="email" id="email" class="form-control" aria-describedby="email"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="col-lg-4">
+                                    <a href="#" class="btn btn-primary cta-primary rounded-0 w-100">SUBSCRIBE</a>
+                                </div>
+                            </div>
+                            <p class="text-white mt-3">For more information, check out our Privacy Policy and Terms of
+                                Service. You can unsubscribe at
+                                any time.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="px-4 py-5 my-5 text-center">
+                <div class="official-pub-lbl mb-3">Official Publication</div>
+                <img src="./src/assets/images/HRSM23-Reverse.png" class="pub-logo" alt="HRD Summit Logo Image"
+                    loading="lazy">
+                <nav class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speaker</a></li>
+                        <li class="nav-item"><a href="#agendaSection" class="nav-link">Schedule</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register Now</a></li>
+                    </ul>
+                </nav>
+                <div class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#" class="nav-link">LinkedIn <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Twitter <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Facebook <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-bar">2023 © - KM Business Information Australia Pty Ltd. - All rights reserved</div>
+            </div>
+        </div>
+    </footer>
+    <!-- boostrap 5 scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- slickjs required scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/src/scripts/slickjs-call.js"></script>
+</body>
+
+</html>
