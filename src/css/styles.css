@@ -1,10 +1,5 @@
 @import "./base.css";
 
-html,
-body {
-    overflow-x: hidden;
-}
-
 body {
     font-family: var(--ff-primary);
     display: flex;
@@ -437,6 +432,26 @@ main {
         }
     }
 
+
+    .img-fg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .img-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        object-fit: cover;
+    }
+
 }
 
 .hero__inner-div-wrapper {
@@ -789,6 +804,7 @@ main {
 
 /* #region LEADING EXPERT SECTION CSS STYLING */
 .leading-expert-section {
+    position: relative;
     padding: 5.5rem 5rem;
     background-color: var(--text-color-shade-900);
     color: var(--text-color-shade-white);
@@ -943,40 +959,42 @@ main {
 
 /* #region SPEAKERS CSS STYLING */
 .speakers-sec {
+    position: relative;
+    background-color: var(--text-color-shade-white);
 
-        [class^="display-"] {
-            font-weight: 600;
-        }
-    
-        .lead {
-            font-weight: 400;
-            max-width: 500px;
-        }
-        
-        .keynote-speaker-lbl {
-            color: var(--primary-shades-400);
-        }
+    [class^="display-"] {
+        font-weight: 600;
+    }
+
+    .lead {
+        font-weight: 400;
+        max-width: 500px;
+    }
+
+    .keynote-speaker-lbl {
+        color: var(--primary-shades-400);
+    }
 
     .container {
         padding: 100px 0;
 
-                @media (max-width: 575px) {
-                        width: 90%;
-                    }
+        @media (max-width: 575px) {
+            width: 90%;
+        }
 
         .keynote-speaker-row {
             background-color: var(--text-color-shade-100);
             padding: 40px 24px;
             border-radius: 10px;
 
-        .keynote-speaker-img {
+            .keynote-speaker-img {
                 border: 1px solid var(--text-color-shade-200);
                 border-radius: 10px;
                 width: 250px;
                 height: 250px;
                 object-fit: contain;
             }
-        
+
             .keynote-speaker-desc {
                 color: var(--text-color-shade-600);
                 margin-bottom: 80px;
@@ -994,11 +1012,11 @@ main {
                 }
 
                 .nav-link.active {
-                        color: var(--primary-shades-400);
-                        background-color: transparent;
-                    }
+                    color: var(--primary-shades-400);
+                    background-color: transparent;
+                }
 
-            } 
+            }
 
             .card {
                 background-color: var(--text-color-shade-50);
@@ -1008,10 +1026,12 @@ main {
         }
     }
 }
+
 /* #endregion SPEAKERS CSS STYLING */
 
 /* #region SPONSORS CSS STYLING */
 .sponsors-sec {
+    position: relative;
     background-color: var(--secondary-default-800);
 
     [class^="display-"] {
@@ -1028,8 +1048,8 @@ main {
         padding: 100px 0;
 
         @media (max-width: 575px) {
-                width: 90%;
-            }
+            width: 90%;
+        }
 
         .sponsors-row {
             margin-bottom: 5rem;
@@ -1071,6 +1091,7 @@ main {
 
 /* #region NEWSLETTER CTA CSS STYLING */
 .newsletter-cta-sec {
+    position: relative;
     background-color: var(--text-color-shade-50);
     padding: 100px 0;
 
@@ -1099,12 +1120,15 @@ main {
 /* #endregion NEWSLETTER CTA CSS STYLING */
 
 .register-cta-sec {
+    position: relative;
+    background-color: var(--text-color-shade-white);
+
     .container {
         padding: 100px 0;
-        
-            @media (max-width: 575px) {
-                width: 90%;
-            }
+
+        @media (max-width: 575px) {
+            width: 90%;
+        }
 
         .register-cta-subheading {
             color: var(--primary-shades-500);
