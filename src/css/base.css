@@ -185,5 +185,8 @@ select {
     padding-block: 4rem;
 }
 
+.d-block {
+    display: block;
+}
 
 /* #endregion UTILITY CLASSES */
