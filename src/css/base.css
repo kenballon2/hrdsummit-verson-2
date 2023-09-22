@@ -189,4 +189,10 @@ select {
     display: block;
 }
 
+/* Enable Bootstrap Transitions */
+
+.fade {
+    transition: opacity .15s linear !important;
+}
+
 /* #endregion UTILITY CLASSES */

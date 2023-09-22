@@ -22,6 +22,7 @@ body {
     /* text color */
     --text-color-shade-900: #202020;
     --text-color-shade-800: #3A3A3A;
+    --text-color-shade-700: #464545;
     --text-color-shade-600: #5B5A5A;
     --text-color-shade-400: #868485;
     --text-color-shade-200: #D9D9D9;
@@ -957,6 +958,95 @@ main {
 
 /* #endregion LEADING EXPERT SECTION CSS STYLING */
 
+/* #region AGENDA CSS STYLING */
+.agenda-sec {
+
+    background-color: var(--text-color-shade-900);
+
+    [class^="display-"] {
+            font-weight: 600;
+        }
+
+    .container {
+        padding: 100px 0;
+        
+            @media (max-width: 575px) {
+                width: 90%;
+            }
+
+                .agenda-tab-row {
+        
+                    .nav-pills {
+
+                        width: max-content;
+        
+                        .nav-link {
+                            color: var(--text-color-shade-400);
+                            padding-left: 0;
+                        }
+        
+                        .nav-link.active {
+                            color: var(--primary-shades-400);
+                            background-color: transparent;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        & button.btn-day.active {
+                                background-color: var(--primary-default, #D80016) !important;
+                                color: var(--text-color-shade-white) !important;
+                                border: 1px solid var(--text-color-shade-white);
+                                border-radius: 100px;
+                                padding: 16px 24px;
+                                text-transform: uppercase;
+                                font-size: 0.875rem;
+                                font-weight: 500;
+                                line-height: 1.25rem;
+                                letter-spacing: 0.00625rem;
+                                
+                        }
+
+                        & button.btn-day {
+                            background-color: transparent;
+                            color: var(--text-color-shade-white);
+                            border: 1px solid var(--text-color-shade-white);
+                            border-radius: 100px;
+                            padding: 16px 24px;
+                            text-transform: uppercase;
+                            font-size: 0.875rem;
+                            font-weight: 500;
+                            line-height: 1.25rem;
+                            letter-spacing: 0.00625rem;
+                        }
+        
+                    }
+
+                }
+
+        & table {
+
+            .day.nav-pills {
+                    column-gap: 5px;
+                }
+
+            & td {
+                vertical-align: middle;
+                padding-left: 0;
+                padding-right: 0;
+
+                }
+            
+            & th {
+                vertical-align: middle;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+        }
+
+    }
+}
+/* #endregion AGENDA CSS STYLING */
+
 /* #region SPEAKERS CSS STYLING */
 .speakers-sec {
     position: relative;
@@ -1014,14 +1104,59 @@ main {
                 .nav-link.active {
                     color: var(--primary-shades-400);
                     background-color: transparent;
+                    transition: background-color 0.3s ease;
                 }
 
             }
 
             .card {
-                background-color: var(--text-color-shade-50);
                 border: 1px solid var(--primary-shades-900);
                 border-radius: 1px;
+
+                &:hover {
+                    border-color: var(--primary-shades-400);
+
+                    .speaker-listing-overlay:before {
+                            background-color: unset;
+                            transition: background-color 500ms linear !important;
+                        }
+
+                    .speaker-listing-img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .speaker-listing-overlay {
+
+                    overflow: hidden;
+
+                    &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            width: inherit;
+                            height: inherit;
+                            background-color: var(--primary-default);
+                            opacity: 0.4;
+                            z-index: 2;
+                        }
+                }
+
+                .speaker-listing-img {
+                    transform: scale(1);
+                    transition: all .5s ease-in-out !important;
+                }
+
+                .card-body {
+                    position: relative;
+                    background-color: var(--text-color-shade-50);
+                    height: 100%;
+                    z-index: 3;
+                }
             }
         }
     }
