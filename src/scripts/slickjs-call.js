@@ -7,4 +7,10 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
   });
+  // testimonial section slider
+  $(".testi-parent-slider").slick({
+    accessibility: true,
+    draggable: true,
+    autoplay: true,
+  });
 });

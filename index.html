@@ -162,7 +162,7 @@
                 loading="lazy">
         </div>
         <!-- hero section -->
-        <section class="hero-section">
+        <section class="hero-section" style="background-image: url('/src/assets/images/HRSM_hero_bg.jpg');">
             <div class="hero__inner-div-wrapper container">
                 <div class="hero-details-wrapper">
                     <div class="hero__date-wrapper">
@@ -217,11 +217,6 @@
                 <div class="summit-art-svg-wrapper d-hide-on-mxs ">
                     <img src="./src/assets/images/summit-hero-svg-text.svg" alt="svg art">
                 </div>
-            </div>
-            <img src="/src/assets/images/wallpaper.webp" alt="" class="img-fg">
-
-            <div class="parallax-1">
-                <img src="/src/assets/images/wallpaper.jpg" alt="" class="img-bg">
             </div>
         </section>
         <!-- hero section stats that only shows on mobile -->
@@ -579,6 +574,70 @@
             </div>
         </section>
 
+        <!-- testimonial secion -->
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="testimonial-heading-wrapper d-flex flex-column">
+                    <h2 class="section-heading-label display-5 fw-bold text-center">Words from Leading Experts</h2>
+                    <p class="section-blurb d-flex col-12 text-center justify-content-center">
+                        We have been working with Leading Experts around the world
+                    </p>
+                </div>
+                <div class="testi-parent-slider">
+                    <div class="testi-slide">
+                        <div class="shoutout-testi-wrapper d-flex gap-3">
+                            <div class="testi-quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="21" viewBox="0 0 27 21"
+                                    fill="none">
+                                    <path
+                                        d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                        fill="#D80016" />
+                                </svg>
+                            </div>
+                            <div class="testi-comment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, asperiores
+                                    praesentium corporis saepe rem fugit sint eaque minima aliquam, doloremque
+                                    laboriosam nihil, maiores ratione dignissimos?</p>
+                            </div>
+                        </div>
+                        <div class="testi-bio-wrapper d-flex flex-column align-items-center gap-3">
+                            <img src="/src/assets/images/leading-expert-speaker-1.jpg" alt="">
+                            <div class="test-bio__name text-center">
+                                <span class="name">Juli McFater</span>
+                                <span class="role">Director of Marketing, Levitt-Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testi-slide">
+                        <div class="shoutout-testi-wrapper d-flex gap-3">
+                            <div class="testi-quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="21" viewBox="0 0 27 21"
+                                    fill="none">
+                                    <path
+                                        d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                        fill="#D80016" />
+                                </svg>
+                            </div>
+                            <div class="testi-comment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, asperiores
+                                    praesentium corporis saepe rem fugit sint eaque minima aliquam, doloremque
+                                    laboriosam nihil, maiores ratione dignissimos?</p>
+                            </div>
+                        </div>
+                        <div class="testi-bio-wrapper d-flex flex-column align-items-center gap-3">
+                            <img src="/src/assets/images/leading-expert-speaker-1.jpg" alt="">
+                            <div class="test-bio__name text-center">
+                                <span class="name">Juli McFater</span>
+                                <span class="role">Director of Marketing, Levitt-Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
         <section id="agenda" class="agenda-sec">
             <div class="container">
                 <div class="row">
@@ -586,100 +645,120 @@
                         <h2 class="display-4 fw-bold mb-5 text-white">Agenda</h2>
                     </div>
 
-                <div class="agenda-tab-row row">
-                    <div class="col-lg-12">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-agenda1-tab" data-bs-toggle="pill" data-bs-target="#pills-agenda1"
-                                    type="button" role="tab" aria-controls="pills-agenda1" aria-selected="true">
-                                    <h3 class="fw-bold">Main Conference</h3>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-agenda2-tab" data-bs-toggle="pill" data-bs-target="#pills-agenda2"
-                                    type="button" role="tab" aria-controls="pills-agenda2" aria-selected="false">
-                                    <h3 class="fw-bold">Workshop</h3>
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-agenda1" role="tabpanel" aria-labelledby="pills-agenda1-tab">
-                
-                                <div class="row">
-                                    <div class="col-lg-12">
+                    <div class="agenda-tab-row row">
+                        <div class="col-lg-12">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-agenda1-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-agenda1" type="button" role="tab"
+                                        aria-controls="pills-agenda1" aria-selected="true">
+                                        <h3 class="fw-bold">Main Conference</h3>
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-agenda2-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-agenda2" type="button" role="tab"
+                                        aria-controls="pills-agenda2" aria-selected="false">
+                                        <h3 class="fw-bold">Workshop</h3>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-agenda1" role="tabpanel"
+                                    aria-labelledby="pills-agenda1-tab">
 
-                                        <table class="table table-hover text-white">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <h3 class="date1-lbl fw-normal text-white">OCT. 5</h3>
-                                                        <h3 class="date2-lbl fw-normal text-white d-none">OCT. 6</h3>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <h3 class="day1-lbl fw-bold text-white">Thursday</h3>
-                                                        <h3 class="day2-lbl fw-bold text-white d-none">Friday</h3>
-                                                    </th>
-                                                    <th scope="col" colspan="2">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+
+                                            <table class="table table-hover text-white">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">
+                                                            <h3 class="date1-lbl fw-normal text-white">OCT. 5</h3>
+                                                            <h3 class="date2-lbl fw-normal text-white d-none">OCT. 6
+                                                            </h3>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <h3 class="day1-lbl fw-bold text-white">Thursday</h3>
+                                                            <h3 class="day2-lbl fw-bold text-white d-none">Friday</h3>
+                                                        </th>
+                                                        <th scope="col" colspan="2">
 
 
-                                                    <ul class="day nav nav-pills justify-content-end ms-auto" id="pills-tab" role="tablist">
-                                                        <li class="nav-item" role="presentation">
-                                                            <button class="btn-day show-date-day1 nav-link active" id="pills-agenda1-day1-tab" data-bs-toggle="pill" data-bs-target="#pills-agenda1-day1"
-                                                                type="button" role="tab" aria-controls="pills-agenda1-day1" aria-selected="true">DAY 1
-                                                            </button>
-                                                        </li>
-                                                        <li class="nav-item" role="presentation">
-                                                            <button class="btn-day show-date-day2 nav-link" id="pills-agenda2-day2-tab" data-bs-toggle="pill" data-bs-target="#pills-agenda2-day2"
-                                                                type="button" role="tab" aria-controls="pills-agenda2-day2" aria-selected="false">DAY 2
-                                                            </button>
-                                                        </li>
-                                                    </ul>
+                                                            <ul class="day nav nav-pills justify-content-end ms-auto"
+                                                                id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button
+                                                                        class="btn-day show-date-day1 nav-link active"
+                                                                        id="pills-agenda1-day1-tab"
+                                                                        data-bs-toggle="pill"
+                                                                        data-bs-target="#pills-agenda1-day1"
+                                                                        type="button" role="tab"
+                                                                        aria-controls="pills-agenda1-day1"
+                                                                        aria-selected="true">DAY 1
+                                                                    </button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="btn-day show-date-day2 nav-link"
+                                                                        id="pills-agenda2-day2-tab"
+                                                                        data-bs-toggle="pill"
+                                                                        data-bs-target="#pills-agenda2-day2"
+                                                                        type="button" role="tab"
+                                                                        aria-controls="pills-agenda2-day2"
+                                                                        aria-selected="false">DAY 2
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
 
-                                                    </th>
-                                                </tr>
-                                            </thead>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td colspan="4">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4">
 
-                                                        <div class="tab-content" id="pills-tabContent">
-                                                            <div class="tab-pane fade show active" id="pills-agenda1-day1" role="tabpanel"
-                                                                aria-labelledby="pills-agenda1-day1-tab">
-                                                        
-                                                                <p class="text-white mb-0">AGENDA 1 DAY 1</p>
-                                                        
+                                                            <div class="tab-content" id="pills-tabContent">
+                                                                <div class="tab-pane fade show active"
+                                                                    id="pills-agenda1-day1" role="tabpanel"
+                                                                    aria-labelledby="pills-agenda1-day1-tab">
+
+                                                                    <p class="text-white mb-0">AGENDA 1 DAY 1</p>
+
+                                                                </div>
+                                                                <div class="tab-pane fade" id="pills-agenda2-day2"
+                                                                    role="tabpanel"
+                                                                    aria-labelledby="pills-agenda2-day2-tab">
+
+                                                                    <p class="text-white mb-0">AGENDA 2 DAY 2</p>
+
+                                                                </div>
                                                             </div>
-                                                            <div class="tab-pane fade" id="pills-agenda2-day2" role="tabpanel" aria-labelledby="pills-agenda2-day2-tab">
-                                                        
-                                                                <p class="text-white mb-0">AGENDA 2 DAY 2</p>
-                                                        
-                                                            </div>
-                                                        </div>
 
 
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
 
 
-                                        </table>
+                                            </table>
 
+                                        </div>
                                     </div>
-                                </div>
-            
-                
-                            </div>
-                            <div class="tab-pane fade" id="pills-agenda2" role="tabpanel" aria-labelledby="pills-agenda2-tab">
-        
-                                <div class="row">
-                                    <div class="col-lg-12"></div>
-                                </div>
 
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-agenda2" role="tabpanel"
+                                    aria-labelledby="pills-agenda2-tab">
+
+                                    <div class="row">
+                                        <div class="col-lg-12"></div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
             </div>
@@ -742,8 +821,9 @@
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                        class="speaker-listing-img img-fluid w-100" alt="..."></div>
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -762,14 +842,16 @@
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100" alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
@@ -781,128 +863,135 @@
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                    
+
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    
+
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                    
+
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    
+
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                    
+
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    
+
                                     </div>
                                 </div>
 
                                 <div class="row mt-4">
                                     <div class="col-lg-12 text-center">
                                         <div class="btn-wrapper">
-                                            <a href="#" class="btn btn-primary cta-primary w-auto" data-bs-toggle="modal"
-                                                data-bs-target="#registerModal">VIEW MORE SPEAKERS</a>
+                                            <a href="#" class="btn btn-primary cta-primary w-auto"
+                                                data-bs-toggle="modal" data-bs-target="#registerModal">VIEW MORE
+                                                SPEAKERS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -917,40 +1006,42 @@
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                
+
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-listing-img img-fluid w-100"
-                                                            alt="...">
+                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                            class="speaker-listing-img img-fluid w-100" alt="...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h5 class="card-title">David Bellas</h5>
                                                         <p class="card-text">Director, LinkedIn Talent Solutions</p>
-                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg" class="img-fluid" alt="...">
+                                                        <img src="./src/assets/images/speaker-card-img-wrapper.svg"
+                                                            class="img-fluid" alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                
+
                                     </div>
                                 </div>
 

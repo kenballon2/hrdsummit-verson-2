@@ -1,10 +1,12 @@
-
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") {
-    // call function here below  
+    // call function here below
     callOpenMobileMenu();
-    showAndHideNavBar('.header', '__header-nav-hidden');
-    showAndHideMobileEventPartner('.event-partner-logo-container.show-on-mobile', '__show-n-hide');
+    showAndHideNavBar(".header", "__header-nav-hidden");
+    showAndHideMobileEventPartner(
+      ".event-partner-logo-container.show-on-mobile",
+      "__show-n-hide"
+    );
   }
 });
 
@@ -66,8 +68,6 @@ const callOpenMobileMenu = () => {
   });
 };
 
-
-
 /**
  * Adds or removes a specified class to a given HTML element based on the user's scrolling and mouse movement.
  * @param {string} divToAddClass - The CSS selector of the HTML element to which the class will be added or removed.
@@ -90,35 +90,71 @@ const showAndHideNavBar = (divToAddClass, nameOfClass) => {
     const isAboveThreshold = mouseMoveY < 90;
     const isClassPresent = headNav.classList.contains(nameOfClass);
 
-    headNav.classList.toggle(nameOfClass, !(isAboveThreshold || !isClassPresent));
+    headNav.classList.toggle(
+      nameOfClass,
+      !(isAboveThreshold || !isClassPresent)
+    );
   };
 
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("mousemove", handleMouseMove);
 };
+
 /**
- * Adds or removes a specified class to an element based on the scroll position of the window.
- * @param {string} eventContainerClass - The class name of the event container element.
- * @param {string} showHideClass - The class name to be added or removed based on the scroll position.
+ * Toggles a CSS class on an element based on user activity.
+ * The class is added when the user scrolls or interacts with the page, and removed after a period of inactivity.
+ *
+ * @param {string} eventContainerClass - The CSS selector for the element to be targeted.
+ * @param {string} nameOfClass - The name of the class to be toggled.
  */
-const showAndHideMobileEventPartner = (eventContainerClass, showHideClass) => {
-  const eventContainer = document.querySelector(eventContainerClass);
-  let scrollPosition = window.scrollY;
+const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
+  let userIsActive = false;
+  let inactivityTimer;
+  let isMobile = window.innerWidth <= 600;
 
-  window.addEventListener('scroll', () => {
-    const currentScrollPosition = window.scrollY;
+  /**
+   * Toggles the specified class on the targeted element.
+   *
+   * @param {boolean} isActive - Whether to add or remove the class.
+   */
+  const toggleClass = (isActive) => {
+    const element = document.querySelector(eventContainerClass);
+    element.classList.toggle(nameOfClass, isActive);
+  };
 
-    if (currentScrollPosition < scrollPosition) {
-      eventContainer.classList.remove(showHideClass);
-    } else {
-      eventContainer.classList.add(showHideClass);
+  /**
+   * Handles the scroll event.
+   */
+  const handleScroll = () => {
+    userIsActive = true;
+    toggleClass(userIsActive);
+
+    clearTimeout(inactivityTimer);
+
+    inactivityTimer = setTimeout(() => {
+      userIsActive = false;
+      toggleClass(userIsActive);
+    }, 4000);
+  };
+
+  /**
+   * Handles the window resize event.
+   */
+  const handleWindowResize = () => {
+    const newIsMobile = window.innerWidth <= 600;
+
+    if (isMobile !== newIsMobile) {
+      isMobile = newIsMobile;
+      isMobile
+        ? window.addEventListener("scroll", handleScroll)
+        : window.removeEventListener("scroll", handleScroll);
     }
+  };
 
-    scrollPosition = currentScrollPosition;
-
-    setTimeout(() => {
-      eventContainer.classList.remove(showHideClass);
-    }, 6000)
-
-  });
+  // Add event listeners based on the initial value of isMobile
+  isMobile
+    ? window.addEventListener("scroll", handleScroll)
+    : window.addEventListener("resize", handleWindowResize);
 };
+
+// End of showAndHideMobileEventPartner function code
