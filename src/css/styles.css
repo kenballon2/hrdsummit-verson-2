@@ -406,11 +406,19 @@ main {
 /* #region HERO SECTION CSS STYLING */
 
 .hero-section {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
 
-    &::before {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    transition: all .3s ease;
+    overflow: hidden;
+
+    &::after {
         content: '';
         display: block;
         width: 100%;
@@ -429,6 +437,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 3;
 
         @media (min-width: 300px) and (max-width: 699px) {
             height: 100svh;
@@ -548,6 +557,7 @@ main {
     position: absolute;
     bottom: 3rem;
     left: 0;
+    z-index: 3;
 
     & img {
         width: calc(100% - 8rem);
@@ -878,7 +888,6 @@ main {
         background-color: var(--text-color-shade-white);
         height: 100%;
         max-height: 120px;
-
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -948,6 +957,8 @@ main {
 
 /* #region TESTIMONIAL CSS STYLING */
 .testimonial-section {
+    position: relative;
+    background-color: var(--secondary-default-800);
     padding: 5.5rem 5rem;
 
     .testi-parent-slider {
@@ -984,10 +995,13 @@ main {
                 }
 
                 .testi-comment {
+                    padding-block: 1.25rem;
+
                     & p {
                         font-size: 1rem;
                         font-weight: 400;
                         color: var(--text-color-shade-800);
+                        margin-bottom: 0;
                     }
                 }
 
@@ -1099,7 +1113,7 @@ main {
 
 /* #region AGENDA CSS STYLING */
 .agenda-sec {
-
+    position: relative;
     background-color: var(--text-color-shade-900);
 
     [class^="display-"] {

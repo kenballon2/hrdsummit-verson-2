@@ -7,6 +7,8 @@ document.addEventListener("readystatechange", (e) => {
       ".event-partner-logo-container.show-on-mobile",
       "__show-n-hide"
     );
+
+    pageScrollZoom();
   }
 });
 
@@ -109,7 +111,7 @@ const showAndHideNavBar = (divToAddClass, nameOfClass) => {
  */
 const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
   let userIsActive = false;
-  let inactivityTimer;
+  let inactivityTimer = null;
   let isMobile = window.innerWidth <= 600;
 
   /**
@@ -122,9 +124,6 @@ const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
     element.classList.toggle(nameOfClass, isActive);
   };
 
-  /**
-   * Handles the scroll event.
-   */
   const handleScroll = () => {
     userIsActive = true;
     toggleClass(userIsActive);
@@ -152,9 +151,27 @@ const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
   };
 
   // Add event listeners based on the initial value of isMobile
-  isMobile
-    ? window.addEventListener("scroll", handleScroll)
-    : window.addEventListener("resize", handleWindowResize);
+  if (isMobile) {
+    window.addEventListener("scroll", handleScroll);
+  }
+
+  window.addEventListener("resize", handleWindowResize);
 };
 
-// End of showAndHideMobileEventPartner function code
+const pageScrollZoom = () => {
+  const bgImage = document.getElementById("hero-section");
+
+  const isMobile = window.innerWidth <= 600;
+  const isTablet = window.innerWidth <= 992;
+
+  const bgImgSize = isMobile ? 360 : isTablet ? 320 : 120;
+  const zoomingMaxSize = isMobile ? 450 : isTablet ? 400 : 200;
+
+  const handleScrollingZoom = () => {
+    const newSize = bgImgSize + window.scrollY / 12;
+    const limitedSize = Math.min(newSize, zoomingMaxSize);
+    bgImage.style.backgroundSize = limitedSize + "%";
+  };
+
+  window.addEventListener("scroll", handleScrollingZoom);
+};
