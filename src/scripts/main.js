@@ -133,7 +133,7 @@ const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
     inactivityTimer = setTimeout(() => {
       userIsActive = false;
       toggleClass(userIsActive);
-    }, 4000);
+    }, 2500);
   };
 
   /**
