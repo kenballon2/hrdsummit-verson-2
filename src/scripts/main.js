@@ -168,7 +168,7 @@ const pageScrollZoom = () => {
   const zoomingMaxSize = isMobile ? 450 : isTablet ? 400 : 200;
 
   const handleScrollingZoom = () => {
-    const newSize = bgImgSize + window.scrollY / 12;
+    const newSize = bgImgSize + window.scrollY / 24;
     const limitedSize = Math.min(newSize, zoomingMaxSize);
     bgImage.style.backgroundSize = limitedSize + "%";
   };

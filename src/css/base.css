@@ -174,7 +174,7 @@ div {
     }
 }
 
-@media (min-width:300px) and (max-width: 700px) {
+@media (min-width:300px) and (max-width: 992px) {
     .d-hide-on-mxs {
         display: none !important;
     }

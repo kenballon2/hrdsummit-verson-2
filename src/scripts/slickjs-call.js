@@ -13,4 +13,11 @@ $(document).ready(function () {
     draggable: true,
     autoplay: true,
   });
+  // gallery section slider
+  $(".grid-gallery-slickjs").slick({
+    accessibility: true,
+    draggable: true,
+    autoplay: true,
+    pauseOnHover: true,
+  });
 });
