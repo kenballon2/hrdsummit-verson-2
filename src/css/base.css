@@ -203,6 +203,10 @@ div {
 
 /* Enable Bootstrap Transitions */
 
+.carousel-item {
+    transition: transform 2s ease, opacity .5s ease-out !important;
+}
+
 .fade {
     transition: opacity .15s linear !important;
 }

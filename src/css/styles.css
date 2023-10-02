@@ -30,6 +30,7 @@ body {
     --text-color-shade-100: #EBEBEB;
     --text-color-shade-50: #F6F6F6;
     --text-color-shade-white: white;
+    --text-color-shade-black: black;
 
     /* brand colors shades  */
     --primary-shades-900: #290004;
@@ -43,6 +44,8 @@ body {
     --primary-lighter-shades-300: #FFD9DC;
     --primary-lighter-shades-200: #FFE5E8;
     --primary-lighter-shades-100: #FFF2F4;
+
+    --error-color-shade-300: #FF7070;
 
     /*Hamburger Menu Stylying*/
     --bar-height: 2px;
@@ -1131,6 +1134,10 @@ main {
             border-bottom: 1px solid var(--primary-lighter-shades-200);
             margin-bottom: 25px !important;
 
+            @media (max-width: 425.85px) {
+                    display: block;
+                }
+
             .nav-link {
                 color: var(--text-color-shade-800);
                 font-weight: 600;
@@ -1199,8 +1206,163 @@ main {
                     content: url('/src/assets/images/link-i.svg');
                 }
             }
+
         }
+
+            .about-learn-slider {
+
+                .carousel-control-next-icon:before {
+                        content: url('/src/assets/images/rigt-arrow.svg');
+                        filter: invert(1);
+                    }
+
+                .carousel-control-prev-icon:before {
+                    content: url('/src/assets/images/left-arrow.svg');
+                    filter: invert(1);
+                }
+
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    background-image: unset;
+                    background-color: var(--text-color-shade-white);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 100%;
+                    top: 87%;
+                }
+
+                .carousel-control-next {
+                    right: 50px;
+                    z-index: 5;
+                    width: auto;
+                    top: 80%;
+                    opacity: 1;
+
+                    @media (max-width: 767.85px) {
+                            top: 0;
+                        }
+
+                    @media (max-width: 320px) {
+                        bottom: 50px;
+                    }
+                    
+                }
+
+                .carousel-control-prev {
+                    left: 87%;
+                    z-index: 5;
+                    width: auto;
+                    top: 80%;
+                    opacity: 1;
+
+                    @media (max-width: 1399.85px) {
+                        left: 85%;
+                    }
+
+                    @media (max-width: 1199.85px) {
+                        left: 82%;
+                    }
+    
+                    @media (max-width: 991.85px) {
+                        left: 76%;
+                    }
+
+                    @media (max-width: 767.85px) {
+                        top: 0;
+                        left: 370px;
+                    }
+
+                    @media (max-width: 575.85px) {
+                        left: 65%;
+                    }
+
+                    @media (max-width: 500.85px) {
+                        left: 62%;
+                    }
+
+                    @media (max-width: 475.85px) {
+                        left: 59%%;
+                    }
+
+                    @media (max-width: 450.85px) {
+                        left: 55%;
+                    }
+
+                    @media (max-width: 375.85px) {
+                        left: 50%;
+                    }
+
+                    @media (max-width: 320px) {
+                        left: 120px;
+                        bottom: 50px;
+                    }
+
+                }
+
+                .carousel-control-prev-icon:hover,
+                .carousel-control-next-icon:hover {
+                    background-color: var(--primary-lighter-shades-400);
+                }
+
+                            & img {
+                                display: block;
+                                height: 500px;
+                                width: 100%;
+                                object-fit: cover;
+
+                                @media (max-width: 758px) {
+                                    max-height: 300px;
+                                }
+                            }
+
+                            .about-learn-overlay {
+                                &:before {
+                                        content: "";
+                                        display: block;
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.90) 63.02%);
+                                        z-index: 1;
+                                
+                                    }
+                                        @media (max-width: 767px) {
+                                            &:before {
+                                                display: none;
+                                            }
+                                        }
+                            }
+
+                            .about-learn-desc {
+                                position: absolute;
+                                padding: 50px 50px 80px;
+                                bottom: 0;
+                                max-width: 800px;
+                                z-index: 2;
+
+                                & h3 {
+                                    color: var(--error-color-shade-300);
+                                }
+
+
+                                @media (max-width: 767px) {
+                                    position: unset;
+                                    background-color: var(--text-color-shade-black);
+                                    padding: 25px;
+                                }
+                            }
+
+
+            }
+
     }
+
 }
 
 /* #region AGENDA CSS STYLING */
@@ -1228,6 +1390,10 @@ main {
                 .nav-link {
                     color: var(--text-color-shade-400);
                     padding-left: 0;
+
+                    @media (max-width: 320px) {
+                        padding: 0;
+                    }
                 }
 
                 .nav-link.active {
@@ -1265,6 +1431,16 @@ main {
                     @media (max-width: 991.85px) {
                         padding: 5px 10px !important;
                     }
+                }
+
+                .btn-day.show-date-day1 {
+                    @media (max-width: 320px) {
+                            margin-bottom: .5rem;
+                        }
+                }
+
+                @media (max-width: 320px) {
+                    display: block;
                 }
 
             }
@@ -1420,7 +1596,7 @@ main {
 
                 &:first-child {
                     @media (max-width: 1199.85px) {
-                        width: 20%;
+                        width: 25%;
                     }
 
                 }
