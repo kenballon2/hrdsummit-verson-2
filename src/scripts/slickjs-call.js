@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".announcement-card-wrapper").slick({
     accessibility: true,
     draggable: true,
-    autoplay: true,
+    // autoplay: true,
     dots: true,
     arrows: false,
   });

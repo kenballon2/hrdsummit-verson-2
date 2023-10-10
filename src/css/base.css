@@ -15,11 +15,14 @@
     --text-color-shade-100: #EBEBEB;
     --text-color-shade-50: #F6F6F6;
     --text-color-shade-white: white;
+    --text-color-shade-black: black;
 
     /* brand colors shades  */
     --primary-shades-700: #8F000E;
+    --primary-shades-600: #B80012;
     --primary-shades-400: #FF0A23;
     --primary-lighter-shades-300: #FFD9DC;
+    --primary-lighter-shades-100: #FFF2F4;
 }
 
 /* Box sizing rules */
@@ -200,6 +203,271 @@ div {
 .d-block {
     display: block;
 }
+
+/* MODALS */
+.modal {
+    .modal-dialog {
+        max-width: 700px;
+    }
+
+    .modal-title {
+        color: var(--text-color-shade-800);
+    }
+
+    & time {
+        color: var(--primary-shades-500);
+        font-size: 24px;
+
+        & span {
+            font-size: 14px;
+        }
+    }
+
+    .modal-content {
+        background-color: transparent;
+        border: 0;
+        border-radius: 1px;
+    }
+
+    .modal-header {
+        background-color: var(--text-color-shade-white);
+        border-radius: 0px;
+        border-bottom: 0;
+    }
+
+    .modal-body {
+        background-color: var(--text-color-shade-white);
+        border-radius: 0px;
+        border-bottom: 0;
+        padding-top: 0;
+    }
+
+    .modal-footer {
+        background-color: var(--primary-shades-600);
+        margin-top: 10px;
+        border: 0;
+        border-radius: 1px;
+        color: var(--text-color-shade-white);
+        font-weight: 700;
+        font-size: 24px;
+
+        .btn-close {
+            filter: invert(1);
+            opacity: 1;
+        }
+    }
+
+    .sponsor-wrapper {
+        background-color: var(--primary-lighter-shades-400);
+        color: var(--text-color-shade-black);
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .speakers-wrapper {
+        .speaker-type {
+            color: #1D064B;
+        }
+
+        .card {
+
+            background-color: var(--primary-lighter-shades-100);
+            border-color: var(--primary-lighter-shades-100);
+            border-radius: 10px;
+            padding: 8px;
+
+            & img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .card-body {
+                margin-left: 10px;
+            }
+
+            .card-title {
+                font-size: 14px;
+                font-weight: 700;
+                color: #1D064B;
+                margin-bottom: 0;
+            }
+
+            .card-text {
+                font-size: 12px;
+                color: #7C7C7C;
+            }
+        }
+    }
+}
+
+.speaker-modal {
+    .card {
+        background-color: var(--primary-shades-900);
+        border-radius: 0px;
+
+        .card-title {
+            font-size: 32px;
+        }
+
+        .card-text {
+            font-size: 18px;
+        }
+
+        .speaker-profile {
+                width: 250px;
+                height: -webkit-fill-available;
+                object-fit: cover;
+
+                @media (max-width: 767.98px) {
+                    width: 100%;
+                }
+        }
+
+        .speaker-details {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 12px;
+
+            & li {
+                display: flex;
+            }
+
+            & li:before {
+                padding-right: 1rem;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .location:before {
+                content: url('/src/assets/images/phone-w.svg');
+            }
+
+            .phone:before {
+                content: url('/src/assets/images/mail-w.svg');
+            }
+
+            .link:before {
+                content: url('/src/assets/images/globe-w.svg');
+            }
+        }
+
+    }
+
+    .modal-body {
+        color: #7C7C7C;
+    }
+
+    & h4 {
+        color: #505050;
+    }
+
+    .speaker-tbl {
+        color: #7C7C7C;
+        font-size: 14px;
+
+        & th {
+            border-color: #CFCFCF !important;
+        }
+
+        & td {
+            font-weight: 600;
+            border-color: #CFCFCF !important;
+        }
+    }
+}
+
+.sponsor-modal {
+    .modal-body {
+            color: #7C7C7C;
+            box-shadow: inset 0px 50px 25px 0px rgb(216 0 22 / 10%);
+        }
+    
+        & h4 {
+            color: #505050;
+        }
+    
+    .state-wrapper {
+            background-color: var(--primary-shades-600);
+        }
+    
+        .logo-wrapper {
+            padding: 20px 0;
+            background-color: var(--primary-lighter-shades-100);
+
+            & img {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+        .btn-primary {
+            padding: 15px;
+            border-radius: 1px;
+            background-color: var(--primary-lighter-shades-300);
+            border-color: var(--primary-lighter-shades-300);
+            color: var(--text-color-shade-black);
+            font-weight: 600;
+            font-size: 14px;
+
+            &:hover {
+                border-color: var(--primary-shades-600) !important;
+                color: var(--primary-shades-600) !important;
+            }
+        }
+
+        .speaker-details {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 12px;
+
+            & li {
+                display: flex;
+            }
+
+            & li:before {
+                padding-right: 1rem;
+                display: inline-block;
+                vertical-align: middle;
+                filter: invert(50%) sepia(8%) saturate(16%) hue-rotate(14deg) brightness(95%) contrast(90%);
+            }
+
+            .location:before {
+                content: url('/src/assets/images/phone-w.svg');
+            }
+
+            .phone:before {
+                content: url('/src/assets/images/mail-w.svg');
+            }
+
+            .link:before {
+                content: url('/src/assets/images/globe-w.svg');
+            }
+        }
+
+}
+
+.agenda-modal.show, .speaker-modal.show, .sponsor-modal.show {
+    background-color: rgb(0 0 0 / 70%);
+    backdrop-filter: blur(3px);
+    display: block !important;
+    opacity: 1 !important;
+    
+    .modal-dialog {
+        margin-right: 30px;
+
+        @media (max-width: 992px) {
+            margin-right: auto;
+        }
+    }
+
+    .modal-footer {
+        cursor: pointer;
+    }
+}
+
+/* #endregion MODALS */
 
 /* Enable Bootstrap Transitions */
 

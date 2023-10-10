@@ -9,6 +9,12 @@ document.addEventListener("readystatechange", (e) => {
     );
 
     pageScrollZoom();
+    backToTopButton();
+    showPopup(
+      "popupModalRegInterest",
+      "show",
+      "#popupModalRegInterest .popup-btn-close"
+    );
   }
 });
 
@@ -133,7 +139,7 @@ const showAndHideMobileEventPartner = (eventContainerClass, nameOfClass) => {
     inactivityTimer = setTimeout(() => {
       userIsActive = false;
       toggleClass(userIsActive);
-    }, 2500);
+    }, 2000);
   };
 
   /**
@@ -174,4 +180,65 @@ const pageScrollZoom = () => {
   };
 
   window.addEventListener("scroll", handleScrollingZoom);
+};
+
+const backToTopButton = () => {
+  const bckToTopDiv = document.querySelector(".btn-back-to-top");
+  window.addEventListener("scroll", (e) => {
+    if (window.scrollY >= 1300) {
+      bckToTopDiv.classList.add("show");
+    } else {
+      bckToTopDiv.classList.remove("show");
+    }
+  });
+
+  bckToTopDiv.addEventListener("click", () => {
+    scrollToTop();
+  });
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+};
+
+/**
+ * Displays a popup modal on a webpage.
+ * The modal is shown after a delay of 3.5 seconds and automatically closes after 10 seconds.
+ * Provides a close button to manually close the modal.
+ *
+ * @param {string} popupModalId - The class name of the popup modal element.
+ * @param {string} classToAdd - The class name to add to the popup modal element to make it visible.
+ * @param {string} closeBtn - The class name of the close button element for the popup modal.
+ */
+const showPopup = (popupModalId, classToAdd, closeBtn) => {
+  const modal = document.getElementById(popupModalId);
+  const closeModal = document.querySelector(closeBtn);
+
+  /**
+   * Adds the specified class to the modal element, sets the `aria-modal` and `role` attributes,
+   * and removes the class and attributes after a delay of 10 seconds.
+   */
+  function addClassToModal() {
+    modal.classList.add(classToAdd);
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("role", "dialog");
+
+    // setTimeout(() => {
+    //   modal.classList.remove(classToAdd);
+    //   modal.removeAttribute("aria-modal");
+    //   modal.removeAttribute("role");
+    // }, 10000);
+  }
+
+  /**
+   * Removes the specified class from the modal element.
+   */
+  function closePopup() {
+    modal.classList.remove(classToAdd);
+    modal.removeAttribute("aria-modal");
+    modal.removeAttribute("role");
+  }
+
+  setTimeout(addClassToModal, 3500);
+  closeModal.addEventListener("click", closePopup);
 };
