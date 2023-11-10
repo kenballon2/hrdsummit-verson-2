@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".announcement-card-wrapper").slick({
     accessibility: true,
     draggable: true,
-    // autoplay: true,
+    autoplay: true,
     dots: true,
     arrows: false,
   });
@@ -14,7 +14,7 @@ $(document).ready(function () {
     autoplay: true,
   });
   // gallery section slider
-  $(".grid-gallery-slickjs").slick({
+  $(".gallery-slides").slick({
     accessibility: true,
     draggable: true,
     autoplay: true,

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#a47cf4">
+    <meta name="description" content="HRD Summit Melbourne">
+    <title>Registration | HRD Summit Melbourne</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <!-- slickjs css -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- custom javascript -->
+    <script src="./src/scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-nav-wrapper container">
+            <div class="navbar-brand logo-wrapper">
+                <picture>
+                    <img src="./src/assets/images/HRSM23-white.png" width="200" height="100%"
+                        alt="HRD Summit Logo Image" loading="lazy">
+                </picture>
+            </div>
+            <div class="nav-sponsor-wrapper">
+                <nav class="navbar navbar-light ms-auto gap-4 d-hide-on-sm">
+                    <ul class="navbar-nav flex-row gap-4 ">
+                        <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
+                        <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Get In Touch</a></li>
+                    </ul>
+                    <div class="cta-btn-wrapper d-hide-on-sm">
+                        <a href="#" class="btn btn-secondary cta-secondary" data-bs-toggle="modal"
+                            data-bs-target="#becomeSponsorModal">Become a sponsor</a>
+                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register Now</a>
+                    </div>
+                </nav>
+                <div class="event-partner-logo-container d-hide-on-sm">
+                    <span class="heading-title">Event Partner</span>
+                    <img src="./src/assets/images/talogy-logo.png" alt="sponsor logo image" loading="lazy">
+                </div>
+                <div class="event-partner-logo-container show-on-tablet">
+                    <span class="heading-title">Event Partner</span>
+                    <img class="logo-white" src="./src/assets/images/talogy-logo-white.png" alt="sponsor logo image"
+                        loading="lazy">
+                </div>
+                <!-- show on small devices -->
+                <div class="mobile-menu-wrapper">
+                    <button aria-label="Open Navigation" tabindex="0" class="nav-toggle" id="openCloseMobileNav">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 25" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--menu">
+                            <path d="M0 .5h45"></path>
+                            <path d="M0 12.5h45"></path>
+                            <path d="M0 24.5h45"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--close">
+                            <path d="M24.293 1.354.716 24.931"></path>
+                            <path d="m.354.646 23.577 23.578"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu nav links -->
+        <div class="navigation-links-parent">
+            <div class="mobile-menu-container d-flex flex-column">
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-item-mobile"><a href="#agendaSection" class="nav-link">Agenda</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Speakers</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Sponsors</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Get In Touch</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#becomeSponsorModal">Become a Sponsor</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Register Now</a></li>
+                </ul>
+                <div class="social-menu-wrapper">
+                    <ul class="sm-social-list-wrapper flex-wrap gap-3">
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Facebook
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                LinkedIn
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Twitter/X
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Youtube
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- this ui block only shows on mobile -->
+        <div class="event-partner-logo-container show-on-mobile">
+            <span class="heading-title">Event Partner</span>
+            <img class="logo-default-color" src="./src/assets/images/talogy-logo.png" alt="sponsor logo image"
+                loading="lazy">
+        </div>
+
+        <section class="terms-privacy-section">
+            <div class="container py-5:p-y-100 w-mw-600">
+                <h2>Terms and Conditions</h2>
+
+                <p>These Terms and Conditions govern your use of the website or app (the "Service") provided by [Company
+                    Name]
+                    ("Company"). By using the Service, you agree to these Terms and Conditions. If you do not agree to
+                    these Terms and
+                    Conditions, you may not use the Service.</p>
+
+                <ol>
+                    <li>
+                        <p>License.</p>
+                        <p>Company grants you a non-exclusive, non-transferable license to use the Service for your
+                            personal,
+                            non-commercial use. You may not use the Service for any other purpose, including any
+                            commercial purpose.</p>
+                    </li>
+                    <li>
+                        <p>Restrictions.</p>
+                        <p>You may not:</p>
+                        <ul>
+                            <li>Copy, modify, distribute, transmit, perform, display, or create derivative works from
+                                any part of the
+                                Service;</li>
+                            <li>Use the Service for any unlawful or unauthorized purpose;</li>
+                            <li>Interfere with the use of the Service by others; or</li>
+                            <li>Violate any applicable laws or regulations.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Termination.</p>
+                        <p>Company may terminate your access to the Service at any time, for any reason, without notice.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Governing Law.</p>
+                        <p>These Terms and Conditions are governed by and construed in accordance with the laws of the
+                            State of [State].
+                        </p>
+                    </li>
+                    <li>
+                        <p>Entire Agreement.</p>
+                        <p>These Terms and Conditions constitute the entire agreement between you and Company with
+                            respect to your use
+                            of the Service and supersede all prior or contemporaneous communications and agreements,
+                            whether oral or
+                            written.</p>
+                    </li>
+                </ol>
+
+                <h2>Privacy Policy</h2>
+
+                <p>[Company Name] ("Company") is committed to protecting your privacy. This Privacy Policy explains how
+                    we collect, use,
+                    and share your personal information.</p>
+
+                <h3>What information do we collect?</h3>
+
+                <p>We collect personal information that you provide to us, such as your name, email address, and mailing
+                    address. We
+                    also collect information about your use of the Service, such as the pages you visit and the links
+                    you click.</p>
+
+                <h3>How do we use your information?</h3>
+
+                <p>We use your information to provide you with the Service, to send you administrative messages, and to
+                    improve the
+                    Service. We may also use your information to send you marketing messages, but you can opt out of
+                    receiving these
+                    messages at any time.</p>
+
+                <h3>How do we share your information?</h3>
+
+                <p>We do not share your personal information with third parties, except as required by law or as
+                    necessary to provide
+                    you with the Service. For example, we may share your information with a payment processor in order
+                    to process your
+                    payments.</p>
+
+                <h3>How do we protect your information?</h3>
+
+                <p>We use a variety of security measures to protect your information from unauthorized access, use, or
+                    disclosure.
+                    However, no security measure is perfect, and we cannot guarantee the absolute safety of your
+                    information.</p>
+
+                <h3>Your choices</h3>
+
+                <p>You have the right to access, correct, or delete your personal information. You can also opt out of
+                    receiving
+                    marketing messages from us. To exercise these rights, please contact us at [email address].</p>
+
+                <h3>Changes to this Privacy Policy</h3>
+
+                <p>We may update this Privacy Policy from time to time. If we make any changes, we will post the updated
+                    Privacy Policy
+                    on our website.</p>
+
+                <h3>Contact us</h3>
+
+                <p>If you have any questions about this Privacy Policy, please contact us at [email address].</p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="px-4 pt-5 pb-3 mt-5 mb-3 text-center">
+                <div class="official-pub-lbl mb-3">Official Publication</div>
+                <img src="./src/assets/images/HRSM23-Reverse.png" class="pub-logo" alt="HRD Summit Logo Image"
+                    loading="lazy">
+                <nav class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
+                        <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#contactModal">Get In Touch</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#becomeSponsorModal">Become A Sponsor</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register
+                                Now</a></li>
+                    </ul>
+                </nav>
+                <div class="terms-condition-wrapper">
+                    <a href="/terms-privacy.html" class="nav-link terms-conditions">Terms & Conditions</a> | <a
+                        href="/terms-privacy.html" class="nav-link terms-conditions">Privacy
+                        Policy</a>
+                </div>
+                <div class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#" class="nav-link">Facebook <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+
+                        <li class="nav-item"><a href="#" class="nav-link">LinkedIn <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Twitter/X <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+
+                        <li class="nav-item"><a href="#" class="nav-link">YouTube <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-bar">2023 © - KM Business Information Canada Ltd. All rights reserved</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Register Now modal -->
+    <div class="modal fade become-sponsor-modal register-modal" id="registerModal" tabindex="-1"
+        aria-labelledby="sponsorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="div-rapper scrollable-y">
+                    <div class="modal-header d-block">
+                        <h2 class="mdl-become-sponsor-heading text-gray-900 text-capitalize mb-4">Select your billing
+                            address for registration</h2>
+                        <p>Unlock a world of possibilities with just a click – simply choose your location, and you’ll
+                            be redirected to our
+                            registration page.</p>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Select your billing
+                                        address
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item-custom" href="/registration.html">Alberta, British
+                                                Columbia, Manitoba, Northwest Territories, Nunavut,Quebec,Saskatchewan,
+                                                Yukon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item-custom" href="/registration.html">Alberta, British
+                                                Columbia, Manitoba, Northwest Territories, Nunavut,Quebec,Saskatchewan,
+                                                Yukon
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Close</div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Agenda modal -->
+    <div class="modal fade agenda-modal" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <time>09:00 <span>AM</span></time>
+                    <h2 class="modal-title" id="agendaModalLabel">Open Registration</h2>
+
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+
+                    <div class="sponsor-wrapper fw-bold mb-5">
+                        Sponsored by: <img src="/src/assets/images/HRSM_Avature-white 1.png" alt="">
+                    </div>
+
+                    <div class="speakers-wrapper moderator">
+                        <div class="speaker-type mb-3 fw-bold">Moderator</div>
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+                                            <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                class="speaker-listing-img img-fluid mb-3 mb-md-0" alt="...">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="card-body p-0">
+                                                <h5 class="card-title">David Bellas</h5>
+                                                <p class="card-text">Head of Partnerships at Bay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+                                            <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                class="speaker-listing-img img-fluid mb-3 mb-md-0" alt="...">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="card-body p-0">
+                                                <h5 class="card-title">David Bellas</h5>
+                                                <p class="card-text">Head of Partnerships at Bay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speakers-wrapper panelist">
+                        <div class="speaker-type mb-3 fw-bold">Panelist</div>
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+                                            <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                class="speaker-listing-img img-fluid mb-3 mb-md-0" alt="...">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="card-body p-0">
+                                                <h5 class="card-title">David Bellas</h5>
+                                                <p class="card-text">Head of Partnerships at Bay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+                                            <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                class="speaker-listing-img img-fluid mb-3 mb-md-0" alt="...">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="card-body p-0">
+                                                <h5 class="card-title">David Bellas</h5>
+                                                <p class="card-text">Head of Partnerships at Bay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+                                            <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                class="speaker-listing-img img-fluid mb-3 mb-md-0" alt="...">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="card-body p-0">
+                                                <h5 class="card-title">David Bellas</h5>
+                                                <p class="card-text">Head of Partnerships at Bay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Back to Agenda</div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speaker bio modal -->
+    <div class="modal fade speaker-modal" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header d-none d-md-block p-0">
+
+                    <div class="card border-0">
+                        <div class="row g-0">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-profile img-fluid"
+                                    alt="...">
+                            </div>
+                            <div class="col-sm-12 col-md-auto col-lg-8">
+                                <div class="card-body text-white">
+                                    <h5 class="card-title mb-0">David Bellas</h5>
+                                    <p class="card-text">Director, LinkedIn Talent Solutions – LinkedIn</p>
+                                    <img src="./src/assets/images/HRSM_LinkedIn-w.svg" class="img-fluid mb-5" alt="...">
+
+                                    <ul class="speaker-details mb-0">
+                                        <li class="location">(02) 9112 0100</li>
+                                        <li class="phone">engage@rewardgateway.com</li>
+                                        <li class="link">rewardgateway.com/au</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-body pt-0 pt-md-3 p-0 p-md-3">
+
+                    <div class="card border-0 d-block d-md-none">
+                        <div class="row g-0">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <img src="./src/assets/images/Jelena-Jokic.webp" class="speaker-profile img-fluid"
+                                    alt="...">
+                            </div>
+                            <div class="col-sm-12 col-md-auto col-lg-8">
+                                <div class="card-body text-white">
+                                    <h5 class="card-title mb-0">David Bellas</h5>
+                                    <p class="card-text">Director, LinkedIn Talent Solutions – LinkedIn</p>
+                                    <img src="./src/assets/images/HRSM_LinkedIn-w.svg" class="img-fluid mb-5" alt="...">
+
+                                    <ul class="speaker-details mb-0">
+                                        <li class="location">(02) 9112 0100</li>
+                                        <li class="phone">engage@rewardgateway.com</li>
+                                        <li class="link">rewardgateway.com/au</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-3 p-md-0">
+
+                        <table class="speaker-tbl table mb-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2" class="pt-0 ps-0 text-uppercase">FEATURED WITHIN THE
+                                        FOLLOWING TOPICS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-uppercase ps-0">Oct 5 <span class="fw-normal">09:15
+                                            AM</span></th>
+                                    <td scope="row" class="speaker-agenda ps-0">Strategies For Retaining Employees In A
+                                        Competitive Market</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-uppercase ps-0">Oct 6 <span class="fw-normal">03:35
+                                            PM</span></th>
+                                    <td scope="row" class="speaker-agenda ps-0">FIRESIDE CHAT: How To Identify And Deal
+                                        With Burnout</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <h4 class="fw-bold">About David</h4>
+                        <div class="mb-4">
+
+                            <p>David Bellas is a Director for LinkedIn’s Talent Solutions business for Australia and New
+                                Zealand. David and his
+                                team
+                                are responsible for helping organisation the way they plan, hire, and develop talent.
+                                This is possible through
+                                the
+                                disruptive technology and unique data and insights from LinkedIn’s 875+ million members
+                                and 57 million
+                                companies.</p>
+
+                            <p>He is passionate about investing in people, everything sales, turning business visions
+                                into reality and working
+                                with
+                                customers to meet their business objectives.</p>
+
+                            <p>Over the past 10 years at LinkedIn, David has had the opportunity to lead the growth and
+                                distribution efforts
+                                across all
+                                sectors at LinkedIn. When LinkedIn acquired Lynda.com in 2015, an online learning
+                                company, David was appointed
+                                as Head
+                                of Learning for Australia and New Zealand and helped oversee the successful transition
+                                to LinkedIn Learning.</p>
+
+                            <p class="mb-0">Over the past several years David has been recognised with awards such as
+                                Diversity and Inclusion Manager of the
+                                Year
+                                and LinkedIn Manager of the Year and has a reputation for inspiring, coaching and
+                                developing talent.</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Back to Speakers</div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sponsor bio modal -->
+    <div class="modal fade sponsor-modal" id="sponsorModal" tabindex="-1" aria-labelledby="sponsorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center d-none d-md-block p-0">
+
+                    <div class="state-wrapper"><img src="./src/assets/images/sydney-skyline.svg" class="img-fluid"
+                            alt="..."></div>
+
+                    <div class="logo-wrapper"><img
+                            src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp" class="img-fluid"
+                            alt="..."></div>
+
+                </div>
+                <div class="modal-body pt-0 pt-md-3 p-0 p-md-3">
+
+                    <div class="text-center d-block d-md-none">
+                        <div class="state-wrapper"><img src="./src/assets/images/sydney-skyline.svg" class="img-fluid"
+                                alt="..."></div>
+
+                        <div class="logo-wrapper"><img
+                                src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp" class="img-fluid"
+                                alt="..."></div>
+                    </div>
+
+                    <div class="p-3 p-md-0">
+
+                        <h4 class="fw-bold">About Reward Gateway</h4>
+
+                        <p>Reward Gateway helps companies engage, motivate and retain people – every day, all over the
+                            world. Partnering with over
+                            4,000 companies in 23 countries, we empower more than 6.5 million employees to connect,
+                            appreciate and support one
+                            another to make the world a better place to work.</p>
+
+                        <p>Our unified employee engagement hub provides the best of recognition, reward, surveys,
+                            benefits and discounts that
+                            support the overall wellbeing of our client’s employees, enriching their talent acquisition,
+                            retention and values-driven
+                            growth.</p>
+
+                        <p class="mb-4">Our clients include American Express, Unilever, Samsung, IBM, McDonald’s and
+                            more.</p>
+
+                        <a href="#" class="btn btn-primary mb-4">Learn More About Reward Gateway</a>
+
+                        <ul class="speaker-details mb-0">
+                            <li class="location">(02) 9112 0100</li>
+                            <li class="phone">engage@rewardgateway.com</li>
+                            <li class="link">rewardgateway.com/au</li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Back to Sponsors</div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Become a Sponsor modal -->
+    <div class="modal fade become-sponsor-modal" id="becomeSponsorModal" tabindex="-1"
+        aria-labelledby="sponsorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="div-rapper scrollable-y">
+                    <div class="modal-header">
+                        <h2 class="mdl-become-sponsor-heading text-gray-900 text-capitalize">Become a Sponsor</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="sponsorInquiry" class="form-label">Inquiry</label>
+                                <select class="form-select" aria-label="Default select example" id="sponsorInquiry">
+                                    <option selected>Become a sponsor</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorFullname" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="sponsorFullname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="sponsorsEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsPhoneNumber" class="form-label">Phone</label>
+                                <div class="become-sponsor-tel-input input-group">
+                                    <select class="form-select" id="countryCode">
+                                        <option selected>CA +1</option>
+                                        <option value="US+1">US +1</option>
+                                        <option value="UK+44">UK +44</option>
+                                    </select>
+                                    <input type="tel" class="form-control" id="sponsorsPhoneNumber">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <p class="py-3 text-gray-500">This site is protected by reCAPTCHA and the Google Privacy
+                                    Policy and Terms
+                                    of Service
+                                    apply.</p>
+
+                            </div>
+                            <div class="input-group pb-5">
+                                <div class="ms-auto"><button type="submit" class="btn btn-primary cta-primary">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button type="button" class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <div class="fs-24-responsive">Close</div>
+                    <div class="btn-close"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup modals START -->
+    <div class="modal fade popup-modal" id="popupModalDefault" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="modal-title text-center text-capitalize">Registration is now open</h2>
+                        <div class="modal-blurb">
+                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
+                                game-changing
+                                opportunity—secure your spot now!</p>
+                        </div>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown-lbl-container">
+                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                        </div>
+                        <div class="timer-countdown-lbl-container text-center">
+                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                            <div class="countdown-time-lbl d-block text-center">
+                                <span class="countdown-time-span-lbl">HR</span>
+                                <span class="countdown-time-span-lbl">MIN</span>
+                                <span class="countdown-time-span-lbl">SEC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-partner">
+                        <div class="popup-sponsor-heading-label">
+                            <h4 class="text-center text-uppercase">in partnership with</h4>
+                        </div>
+                        <picture>
+                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-5">
+                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade popup-modal" id="popupModalDiscount" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="modal-title text-center text-capitalize">Discount Ending soon</h2>
+                        <div class="modal-blurb">
+                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
+                                game-changing
+                                opportunity—secure your spot now!</p>
+
+                        </div>
+                    </div>
+                    <h3 class="discount-lbl text-center fs-1 text fw-bold my-4">50% Discount</h3>
+                    <div class="countdown-container">
+                        <div class="countdown-lbl-container">
+                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                        </div>
+                        <div class="timer-countdown-lbl-container text-center">
+                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                            <div class="countdown-time-lbl d-block text-center">
+                                <span class="countdown-time-span-lbl">HR</span>
+                                <span class="countdown-time-span-lbl">MIN</span>
+                                <span class="countdown-time-span-lbl">SEC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-partner">
+                        <div class="popup-sponsor-heading-label">
+                            <h4 class="text-center text-uppercase">in partnership with</h4>
+                        </div>
+                        <picture>
+                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-5">
+                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade popup-modal" id="popupModalEvenStartingSoon" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="modal-title text-center text-capitalize">Event starting soon</h2>
+                        <div class="modal-blurb">
+                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
+                                game-changing
+                                opportunity—secure your spot now!</p>
+
+                        </div>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown-lbl-container">
+                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                        </div>
+                        <div class="timer-countdown-lbl-container text-center">
+                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                            <div class="countdown-time-lbl d-block text-center">
+                                <span class="countdown-time-span-lbl">HR</span>
+                                <span class="countdown-time-span-lbl">MIN</span>
+                                <span class="countdown-time-span-lbl">SEC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-partner">
+                        <div class="popup-sponsor-heading-label">
+                            <h4 class="text-center text-uppercase">in partnership with</h4>
+                        </div>
+                        <picture>
+                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-5">
+                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade popup-modal" id="popupModalRegInterest" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="modal-title text-center text-capitalize">Event has concluded</h2>
+                        <div class="modal-blurb">
+                            <p>We want to give a big thanks to everyone who joined us this year. Get ready to dive into
+                                the world of HR's powerful
+                                impact at next year's Melbourne Summit. Don't pass up the chance to be part of this
+                                game-changer—register your interest
+                                today!</p>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <form>
+                            <div class="py-4 m-auto">
+                                <div class="reg-interest-wrapper d-flex flex-wrap flex-column gap-2">
+                                    <div>
+                                        <label for="exampleInputEmail1" class="form-label d-none">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Enter your email">
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <button type="submit" class="btn btn-primary cta-primary">Register Your
+                                            Interest</button>
+                                    </div>
+                                </div>
+
+                                <div id="emailHelp" class="form-text text-center">We'll never share your email with
+                                    anyone else.
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="popup-partner py-2">
+                        <div class="popup-sponsor-heading-label">
+                            <h4 class="text-center text-uppercase">in partnership with</h4>
+                        </div>
+                        <picture>
+                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup modals END -->
+
+    <!-- floating back to top button -->
+    <div class="btn-back-to-top" aria-label="Back to top button">
+        <div class="svg-wrapper-right-arrow">
+            <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
+                <path d="M15 1L19 5M19 5L15 9M19 5L1 5" stroke-linecap="square" stroke-linejoin="round" />
+            </svg>
+
+        </div>
+    </div>
+
+
+    <!-- boostrap 5 scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- slickjs required scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/src/scripts/slickjs-call.js"></script>
+</body>
+
+</html>

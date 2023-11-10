@@ -15,6 +15,7 @@ document.addEventListener("readystatechange", (e) => {
       "show",
       "#popupModalRegInterest .popup-btn-close"
     );
+    // captureColor();
   }
 });
 
@@ -242,3 +243,188 @@ const showPopup = (popupModalId, classToAdd, closeBtn) => {
   setTimeout(addClassToModal, 3500);
   closeModal.addEventListener("click", closePopup);
 };
+
+$(document).ready(function () {
+  $("#more_cookie").click(function () {
+    $(".back").slideDown();
+    $("#more_cookie").hide();
+    $(".save-cookie").show();
+  });
+});
+
+class ColorCapturer {
+  constructor(
+    brandColorHex,
+    brandColorFirstShade,
+    brandColorSecondShadeLighter
+  ) {
+    this.brandColor = document.getElementById(brandColorHex);
+    this.newbrandColor = null;
+    this.brandColorFirstShade = brandColorFirstShade;
+    this.brandColorSecondShadeLighter = brandColorSecondShadeLighter;
+
+    this.initialize();
+  }
+
+  initialize() {
+    const storedColor = localStorage.getItem("brandColor");
+    if (storedColor && this.isValidHexColor(storedColor)) {
+      this.brandColor.value = storedColor;
+      this.updateColors(storedColor);
+    }
+
+    this.brandColor.addEventListener("input", () => {
+      try {
+        this.newbrandColor = this.brandColor.value.trim();
+        this.updateColors(this.newbrandColor);
+        localStorage.setItem("brandColor", this.newbrandColor);
+      } catch (error) {
+        console.error("An error occurred: ", error);
+      }
+    });
+  }
+
+  updateColors(newColor, opacityVal) {
+    if (this.isValidHexColor(newColor)) {
+      this.updateCSSCustomProperties(newColor);
+    }
+  }
+
+  isValidHexColor(color) {
+    const hexColorRegExp = /^#?([0-9A-Fa-f]{3}){1,2}$/;
+    return hexColorRegExp.test(color);
+  }
+
+  updateCSSCustomProperties(baseColor) {
+    const { shades, shadeLighter } = this.generateColorShades(baseColor, 1);
+
+    // Update shades
+    for (let i = 100; i <= 900; i += 100) {
+      const customProps = `${this.brandColorFirstShade + i}`;
+      const hslaString = `hsla(${shades[i].h}, ${shades[i].s}%, ${shades[i].l}%, ${shades[i].a})`;
+      this.setBrandColor(customProps, hslaString);
+    }
+
+    // Update shadeLighter
+    for (let i = 100; i <= 900; i += 100) {
+      const customProps = `${this.brandColorSecondShadeLighter + i}`;
+      const hslaString = `hsla(${shadeLighter[i].h}, ${shadeLighter[i].s}%, ${shadeLighter[i].l}%, ${shadeLighter[i].a})`;
+      this.setBrandColor(customProps, hslaString);
+    }
+  }
+
+  generateColorShades(baseColor, alpha) {
+    const baseColorHSLA = this.hexToHSLA(baseColor, alpha);
+
+    const shades = {};
+    const shadeLighter = {};
+
+    shades[500] = { ...baseColorHSLA };
+    shadeLighter[100] = { ...baseColorHSLA };
+
+    for (let i = 600; i <= 900; i += 100) {
+      let delta = (i - 500) / 100;
+      let newLightness = baseColorHSLA.l - delta * 7.5;
+      newLightness = Math.min(100, Math.max(0, newLightness));
+      const shadeHSLA = {
+        h: baseColorHSLA.h,
+        s: baseColorHSLA.s,
+        l: newLightness,
+        a: baseColorHSLA.a,
+      };
+      shades[i] = shadeHSLA;
+    }
+
+    for (let i = 400; i >= 100; i -= 100) {
+      let delta = (500 - i) / 100;
+      let newLightness = baseColorHSLA.l + delta * 7.5;
+      newLightness = Math.min(100, Math.max(0, newLightness));
+      const shadeHSLA = {
+        h: baseColorHSLA.h,
+        s: baseColorHSLA.s,
+        l: newLightness,
+        a: baseColorHSLA.a,
+      };
+      shades[i] = shadeHSLA;
+    }
+
+    let lighterBaseColor = { ...shades[100] };
+    for (let i = 900; i >= 100; i -= 100) {
+      let delta = (900 - i) / 100;
+      let newLightness = lighterBaseColor.l + delta * 3;
+      newLightness = Math.min(100, Math.max(0, newLightness));
+      const newLighterShadeHSLA = {
+        h: lighterBaseColor.h,
+        s: lighterBaseColor.s,
+        l: newLightness,
+        a: lighterBaseColor.a,
+      };
+      shadeLighter[i] = newLighterShadeHSLA;
+    }
+
+    return { shades, shadeLighter };
+  }
+
+  hexToHSLA(hex, alpha = 1) {
+    // Remove the "#" character, if present
+    hex = hex.replace(/^#/, "");
+
+    // Convert the hex code to RGB
+    const r = parseInt(hex.slice(0, 2), 16) / 255;
+    const g = parseInt(hex.slice(2, 4), 16) / 255;
+    const b = parseInt(hex.slice(4, 6), 16) / 255;
+
+    // Find the min and max values for RGB
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+
+    // Calculate the hue (H)
+    let h;
+    if (max === min) {
+      h = 0; // Achromatic (grayscale)
+    } else if (max === r) {
+      h = 60 * ((g - b) / (max - min));
+    } else if (max === g) {
+      h = 60 * (2 + (b - r) / (max - min));
+    } else {
+      h = 60 * (4 + (r - g) / (max - min));
+    }
+    if (h < 0) h += 360;
+
+    // Calculate the lightness (L)
+    const l = (max + min) / 2;
+
+    // Calculate the saturation (S)
+    let s;
+    if (max === min) {
+      s = 0;
+    } else if (l <= 0.5) {
+      s = (max - min) / (2 * l);
+    } else {
+      s = (max - min) / (2 - 2 * l);
+    }
+
+    return {
+      h: Math.round(h),
+      s: Math.round(s * 100),
+      l: Math.round(l * 100),
+      a: alpha, // Include alpha in the result
+    };
+  }
+
+  setBrandColor(CSSCustomProp, brandColor) {
+    document.documentElement.style.setProperty(CSSCustomProp, brandColor);
+  }
+}
+
+// sample Usage:
+const primaryColor = new ColorCapturer(
+  "primary-color",
+  "--primary-shades-",
+  "--primary-lighter-shades-"
+);
+const secondaryColor = new ColorCapturer(
+  "secondary-color",
+  "--secondary-shades-",
+  "--secondary-lighter-shades-"
+);

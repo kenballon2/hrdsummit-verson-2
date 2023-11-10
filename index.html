@@ -46,11 +46,12 @@
                         <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
                         <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
                         <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Get In Touch</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#contactModal">Get In Touch</a></li>
                     </ul>
                     <div class="cta-btn-wrapper d-hide-on-sm">
                         <a href="#" class="btn btn-secondary cta-secondary" data-bs-toggle="modal"
-                            data-bs-target="#becomeSponsor">Become a sponsor</a>
+                            data-bs-target="#becomeSponsorModal">Become a sponsor</a>
                         <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
                             data-bs-target="#registerModal">Register Now</a>
                     </div>
@@ -90,7 +91,8 @@
                     <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Speakers</a></li>
                     <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Sponsors</a></li>
                     <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Get In Touch</a></li>
-                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Become a Sponsor</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#becomeSponsorModal">Become a Sponsor</a></li>
                     <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Register Now</a></li>
                 </ul>
                 <div class="social-menu-wrapper">
@@ -165,6 +167,8 @@
         <section id="hero-section" class="hero-section" style="background-image: url('/src/assets/images/2.jpg');">
             <div class="hero__inner-div-wrapper container">
                 <div class="hero-details-wrapper">
+                    <input type="color" name="input color" id="primary-color" style="display: block;">
+                    <input type="color" name="input color" id="secondary-color" style="display: block;">
                     <div class="hero__date-wrapper">
                         <span class="hero__date-label text-white text-capitalize">July 26-27, 2023 | Crown Conference
                             Center</span>
@@ -182,7 +186,7 @@
                             <div class="discount-cta-wrapper">
                                 <div class="discount-lable-toggle">
                                     <span class="discount-label">Save 50% on Tickets</span>
-                                    <span class="discount-sublabel text-white">Save 50% on Tickets</span>
+                                    <span class="discount-sublabel text-white">#hashtaghere</span>
                                 </div>
                                 <div class="cta-wrapper d-flex gap-3 flex-wrap">
                                     <a href="#" class="btn btn-primary cta-primary btn-hero-primary"
@@ -276,7 +280,8 @@
                                     </div>
                                     <div class="ui-block-component-show-on-sm d-hide-on-large">
                                         <div class="announce__img-wrapper ui-block-component">
-                                            <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                            <img src="/src/assets/images/announcement-img.jpg" alt=""
+                                                class="object-fit-cover">
                                             <div class="hrd-label">
                                                 <div class="hrd-label__line"></div>
                                                 <span class="hrd-label__text text-white">HRD Summit 2023</span>
@@ -311,7 +316,7 @@
                             </div>
                             <!-- below html ui block can be component to be reusable to other ui container -->
                             <div class="announce__img-wrapper ui-block-component d-hide-on-sm">
-                                <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                <img src="/src/assets/images/announcement-img.jpg" alt="" class="object-fit-cover">
                                 <div class="hrd-label">
                                     <div class="hrd-label__line"></div>
                                     <span class="hrd-label__text text-white">HRD Summit 2023</span>
@@ -322,6 +327,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="announce__card-slide d-grid regnow-slide">
                             <div class="announce__details-ctas d-flex flex-column">
                                 <div class="heading-title-sponsor-wrapper">
@@ -383,8 +389,7 @@
 
                             </div>
                             <!-- below html ui block can be component to be reusable to other ui container -->
-                            <div
-                                class="announce__img-wrapper ui-block-component d-hide-on-sm d-flex align-items-center">
+                            <div class="announce__img-wrapper ui-block-component d-hide-on-sm d-flex">
                                 <div class="d-none">
                                     <img src="/src/assets/images/announcement-img.jpg" alt="">
                                     <div class="hrd-label">
@@ -434,7 +439,41 @@
                                     </div>
                                     <div class="ui-block-component-show-on-sm d-hide-on-large">
                                         <div class="announce__img-wrapper ui-block-component">
-                                            <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                            <div
+                                                class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                                                <div class="cdp-points__logo-container">
+                                                    <img src="/src/assets/images/CPHR-sample.png" alt=""
+                                                        class="object-fit-contain">
+                                                    <p
+                                                        class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">
+                                                        4 hours
+                                                        30mins</p>
+                                                </div>
+                                                <div class="cdp-points__logo-container">
+                                                    <img src="/src/assets/images/CPHR2-sample.png" alt=""
+                                                        class="object-fit-contain">
+                                                    <p
+                                                        class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">
+                                                        4 hours
+                                                        30mins</p>
+                                                </div>
+                                                <div class="cdp-points__logo-container">
+                                                    <img src="/src/assets/images/HRPA-sample.png" alt=""
+                                                        class="object-fit-contain">
+                                                    <p
+                                                        class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">
+                                                        4 hours
+                                                        30mins</p>
+                                                </div>
+                                                <div class="cdp-points__logo-container">
+                                                    <img src="/src/assets/images/CPHR-sample.png" alt=""
+                                                        class="object-fit-contain">
+                                                    <p
+                                                        class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">
+                                                        4 hours
+                                                        30mins</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -456,7 +495,31 @@
                             </div>
                             <!-- below html ui block can be component to be reusable to other ui container -->
                             <div class="announce__img-wrapper ui-block-component d-hide-on-sm">
-                                <img src="/src/assets/images/announcement-img.jpg" alt="">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                                    <div class="cdp-points__logo-container">
+                                        <img src="/src/assets/images/CPHR-sample.png" alt="" class="object-fit-contain">
+                                        <p class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">4 hours
+                                            30mins</p>
+                                    </div>
+                                    <div class="cdp-points__logo-container">
+                                        <img src="/src/assets/images/CPHR2-sample.png" alt=""
+                                            class="object-fit-contain">
+                                        <p class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">4 hours
+                                            30mins</p>
+                                    </div>
+                                    <div class="cdp-points__logo-container">
+                                        <img src="/src/assets/images/HRPA-sample.png" alt="" class="object-fit-contain">
+                                        <p class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">4 hours
+                                            30mins</p>
+                                    </div>
+                                    <div class="cdp-points__logo-container">
+                                        <img src="/src/assets/images/CPHR-sample.png" alt="" class="object-fit-contain">
+                                        <p class="cdp-points__txt-lbl text-center text-capitalize text-gray-800">4 hours
+                                            30mins</p>
+                                    </div>
+
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -494,7 +557,7 @@
                     </div>
                     <div class="leading-expert__speaker-card-wrapper d-grid">
                         <!-- speaker card -->
-                        <div class="leading-expert__speaker-card cursor-pointer" tabindex="0">
+                        <div class="leading-expert__speaker-card cursor-pointer" role="button" tabindex="0">
                             <div class="speaker-card-div-wrapper">
                                 <img class="img-leading-expert-speaker"
                                     src="/src/assets/images/leading-expert-speaker-1.jpg" alt="speaker leading experts">
@@ -514,7 +577,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="leading-expert__speaker-card cursor-pointer" tabindex="0">
+                        <div class="leading-expert__speaker-card cursor-pointer" role="button" tabindex="0">
                             <div class="speaker-card-div-wrapper">
                                 <img class="img-leading-expert-speaker"
                                     src="/src/assets/images/leading-expert-speaker-2.jpg" alt="speaker leading experts">
@@ -534,7 +597,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="leading-expert__speaker-card cursor-pointer" tabindex="0">
+                        <div class="leading-expert__speaker-card cursor-pointer" role="button" tabindex="0">
                             <div class="speaker-card-div-wrapper">
                                 <img class="img-leading-expert-speaker"
                                     src="/src/assets/images/leading-expert-speaker-3.jpg" alt="speaker leading experts">
@@ -554,7 +617,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="leading-expert__speaker-card cursor-pointer" tabindex="0">
+                        <div class="leading-expert__speaker-card cursor-pointer" role="button" tabindex="0">
                             <div class="speaker-card-div-wrapper">
                                 <img class="img-leading-expert-speaker"
                                     src="/src/assets/images/leading-expert-speaker-4.jpg" alt="speaker leading experts">
@@ -603,6 +666,11 @@
                                 <button class="nav-link" id="pills-venue-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-venue" type="button" role="tab" aria-controls="pills-venue"
                                     aria-selected="false">THE VENUE</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-travel-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-travel" type="button" role="tab" aria-controls="pills-travel"
+                                    aria-selected="false">TRAVEL PLANS</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
@@ -799,6 +867,9 @@
                                                 <a href="#" class="btn btn-primary cta-primary w-auto"
                                                     data-bs-toggle="modal" data-bs-target="#registerModal">Register
                                                     Now</a>
+                                                <a href="#" class="btn btn-secondary cta-secondary"
+                                                    data-bs-toggle="modal" data-bs-target="#becomeSponsor">FLOOR
+                                                    PLAN</a>
                                             </div>
                                         </div>
                                         <div class="col-lg-auto">
@@ -808,6 +879,163 @@
                                 </div>
 
                             </div>
+
+                            <div class="tab-pane fade" id="pills-travel" role="tabpanel"
+                                aria-labelledby="pills-travel-tab">
+
+                                <div id="aboutTravelSlider" class="about-learn-slider travel-plans carousel slide"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="about-content">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-lg-7">
+                                                        <div class="about-desc">
+                                                            <h3 class="display-6 mb-4">At Crown Conference Center</h3>
+
+                                                            <p class="mb-4">Nestled in Melbourne’s vibrant city center,
+                                                                our venue
+                                                                offers a blend of sophistication and cutting-edge
+                                                                facilities,
+                                                                creating a conducive environment for an enriching
+                                                                experience.</p>
+
+                                                            <ul class="about-venue-details mb-4">
+                                                                <li class="location">8 Whiteman St, Southbank VIC 3006,
+                                                                    Australia
+                                                                </li>
+                                                                <li class="phone">+61 3 9292 6688</li>
+                                                                <li class="link">Crown Hotels Melbourne</li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div class="btn-wrapper mb-4">
+                                                            <a href="#" class="btn btn-primary cta-primary w-auto"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#registerModal">Register
+                                                                Now</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <img src="./src/assets/images/about-venue.png" class="img-fluid"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="about-content">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-lg-7">
+                                                        <div class="about-desc">
+                                                            <h3 class="display-6 mb-4">At Crown Conference Center</h3>
+
+                                                            <p class="mb-4">Nestled in Melbourne’s vibrant city center,
+                                                                our venue
+                                                                offers a blend of sophistication and cutting-edge
+                                                                facilities,
+                                                                creating a conducive environment for an enriching
+                                                                experience.</p>
+
+                                                            <ul class="about-venue-details mb-4">
+                                                                <li class="location">8 Whiteman St, Southbank VIC 3006,
+                                                                    Australia
+                                                                </li>
+                                                                <li class="phone">+61 3 9292 6688</li>
+                                                                <li class="link">Crown Hotels Melbourne</li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div class="btn-wrapper mb-4">
+                                                            <a href="#" class="btn btn-primary cta-primary w-auto"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#registerModal">Register
+                                                                Now</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <img src="./src/assets/images/about-venue.png" class="img-fluid"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="about-content">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-lg-7">
+                                                        <div class="about-desc">
+                                                            <h3 class="display-6 mb-4">At Crown Conference Center</h3>
+
+                                                            <p class="mb-4">Nestled in Melbourne’s vibrant city center,
+                                                                our venue
+                                                                offers a blend of sophistication and cutting-edge
+                                                                facilities,
+                                                                creating a conducive environment for an enriching
+                                                                experience.</p>
+
+                                                            <ul class="about-venue-details mb-4">
+                                                                <li class="location">8 Whiteman St, Southbank VIC 3006,
+                                                                    Australia
+                                                                </li>
+                                                                <li class="phone">+61 3 9292 6688</li>
+                                                                <li class="link">Crown Hotels Melbourne</li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                        <div class="btn-wrapper mb-4">
+                                                            <a href="#" class="btn btn-primary cta-primary w-auto"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#registerModal">Register
+                                                                Now</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <img src="./src/assets/images/about-venue.png" class="img-fluid"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#aboutTravelSlider" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#aboutTravelSlider" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -948,7 +1176,7 @@
                                                 </tr>
                                                 <tr class="hide-on-mobile">
                                                     <th>TIME</th>
-                                                    <th>NAME</th>
+                                                    <th>TOPIC</th>
                                                     <th colspan="2">SPEAKER / MODERATOR / PANEL</th>
                                                 </tr>
                                                 <tr>
@@ -1232,11 +1460,9 @@
                                     <div class="col-lg-6">
                                         <div class="card mb-3" data-bs-toggle="modal" data-bs-target="#speakerModal">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1253,11 +1479,9 @@
 
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1274,11 +1498,9 @@
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1295,11 +1517,9 @@
 
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1316,11 +1536,9 @@
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1337,11 +1555,9 @@
 
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1358,11 +1574,9 @@
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1379,11 +1593,9 @@
 
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1417,11 +1629,9 @@
                                     <div class="col-lg-6">
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1438,11 +1648,9 @@
 
                                         <div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <div class="speaker-listing-overlay">
-                                                        <img src="./src/assets/images/Jelena-Jokic.webp"
-                                                            class="speaker-listing-img img-fluid w-100" alt="...">
-                                                    </div>
+                                                <div class="col-md-4 speaker-listing-overlay">
+                                                    <img src="./src/assets/images/Jelena-Jokic.webp"
+                                                        class="speaker-listing-img img-fluid w-100" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
@@ -1485,7 +1693,8 @@
                             <div class="card-body text-center">
                                 <!-- <h5 class="card-title">Card title</h5> -->
                             </div>
-                            <img src="./src/assets/images/sponsor-caasa.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#sponsorModal">
+                            <img src="./src/assets/images/sponsor-caasa.png" class="card-img-top" alt="..."
+                                data-bs-toggle="modal" data-bs-target="#sponsorModal">
                         </div>
                     </div>
                 </div>
@@ -1577,7 +1786,7 @@
                         <h3 class="display-5 mb-4 text-white">Become Our Sponsors</h3>
                         <div>
                             <a href="#" class="btn btn-secondary cta-secondary w-auto" data-bs-toggle="modal"
-                                data-bs-target="#becomeSponsor">CONTACT US</a>
+                                data-bs-target="#becomeSponsorModal">CONTACT US</a>
                         </div>
                     </div>
                 </div>
@@ -1592,10 +1801,11 @@
                     <span class="d-block text-white">See our event images preview</span>
                 </div>
                 <div class="grid-gallery-slickjs">
-                    <!-- repeatable slides container -->
+
                     <div class="grid-slider-wrapper d-grid">
-                        <div class="grid-item-col grid-item-one">
-                            <div class="d-flex align-items-center">
+                        <div class="grid-item-col grid-item-one gallery-slides">
+                            <!-- repeatable slides container -->
+                            <div class="gallery-slides__item">
                                 <div>
                                     <img src="/src/assets/images/gallery-1.jpg" alt="">
                                     <div class="caption text-white">
@@ -1603,7 +1813,30 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="gallery-slides__item">
+                                <div>
+                                    <img src="/src/assets/images/gallery-3.jpg" alt="">
+                                    <div class="caption text-white">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, corrupti.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-slides__item">
+                                <div>
+                                    <img src="/src/assets/images/gallery-5.jpg" alt="">
+                                    <div class="caption text-white">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, corrupti.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-slides__item">
+                                <div>
+                                    <img src="/src/assets/images/gallery-6.jpg" alt="">
+                                    <div class="caption text-white">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, corrupti.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid-item-col grid-item-three d-hide-on-mxs">
                             <img src="/src/assets/images/gallery-2.jpg" alt="">
@@ -1615,28 +1848,7 @@
                             <img src="/src/assets/images/gallery-4.jpg" alt="">
                         </div>
                     </div>
-                    <div class="grid-slider-wrapper d-grid">
-                        <div class="grid-item-col grid-item-one">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <img src="/src/assets/images/gallery-5.jpg" alt="">
-                                    <div class="caption text-white">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, corrupti.
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="grid-item-col grid-item-three d-hide-on-mxs">
-                            <img src="/src/assets/images/gallery-6.jpg" alt="">
-                        </div>
-                        <div class="grid-item-col grid-item-five d-hide-on-mxs">
-                            <img src="/src/assets/images/gallery-7.jpg" alt="">
-                        </div>
-                        <div class="grid-item-col grid-item-nine d-hide-on-mxs">
-                            <img src="/src/assets/images/gallery-8.jpg" alt="">
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1698,17 +1910,24 @@
                         <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
                         <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
                         <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Get In Touch</a></li>
                         <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#sponsorInquiryModal">Become A Sponsor</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Register
-                            Now</a></li>
+                                data-bs-target="#contactModal">Get In Touch</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#becomeSponsorModal">Become A Sponsor</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register
+                                Now</a></li>
                     </ul>
                 </nav>
+                <div class="terms-condition-wrapper">
+                    <a href="/terms-privacy.html" class="nav-link terms-conditions">Terms & Conditions</a> <a
+                        href="/terms-privacy.html" class="nav-link terms-conditions">Privacy
+                        Policy</a>
+                </div>
                 <div class="d-flex justify-content-center py-3">
                     <ul class="nav nav-pills justify-content-center">
-                        <li class="nav-item"><a href="#" class="nav-link">Facebook <img src="./src/assets/images/socmed_arrow.svg"
-                                    class="img-fluid" loading="lazy"></a>
+                        <li class="nav-item"><a href="#" class="nav-link">Facebook <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
                         </li>
 
                         <li class="nav-item"><a href="#" class="nav-link">LinkedIn <img
@@ -1717,7 +1936,7 @@
                         <li class="nav-item"><a href="#" class="nav-link">Twitter/X <img
                                     src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
                         </li>
-                        
+
                         <li class="nav-item"><a href="#" class="nav-link">YouTube <img
                                     src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
                         </li>
@@ -1727,6 +1946,58 @@
             </div>
         </div>
     </footer>
+
+
+
+    <!-- Register Now modal -->
+    <div class="modal fade become-sponsor-modal register-modal" id="registerModal" tabindex="-1"
+        aria-labelledby="sponsorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="div-rapper scrollable-y">
+                    <div class="modal-header d-block">
+                        <h2 class="mdl-become-sponsor-heading text-gray-900 text-capitalize mb-4">Select your billing
+                            address for registration</h2>
+                        <p>Unlock a world of possibilities with just a click – simply choose your location, and you’ll
+                            be redirected to our
+                            registration page.</p>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Select your billing
+                                        address
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item-custom" href="/registration.html">Alberta, British
+                                                Columbia, Manitoba, Northwest Territories, Nunavut, Quebec,
+                                                Saskatchewan,
+                                                Yukon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item-custom" href="/registration.html">Alberta, British
+                                                Columbia, Manitoba, Northwest Territories, Nunavut,Quebec,Saskatchewan,
+                                                Yukon
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Close</div>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Agenda modal -->
@@ -1931,7 +2202,8 @@
                         <table class="speaker-tbl table mb-4">
                             <thead>
                                 <tr>
-                                    <th scope="col" colspan="2" class="pt-0 ps-0 text-uppercase">FEATURED WITHIN THE FOLLOWING TOPICS</th>
+                                    <th scope="col" colspan="2" class="pt-0 ps-0 text-uppercase">FEATURED WITHIN THE
+                                        FOLLOWING TOPICS</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -2003,47 +2275,56 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header text-center d-none d-md-block p-0">
-    
-                    <div class="state-wrapper"><img src="./src/assets/images/sydney-skyline.svg" class="img-fluid" alt="..."></div>
 
-                    <div class="logo-wrapper"><img src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp" class="img-fluid" alt="..."></div>
-    
+                    <div class="state-wrapper"><img src="./src/assets/images/sydney-skyline.svg" class="img-fluid"
+                            alt="..."></div>
+
+                    <div class="logo-wrapper"><img
+                            src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp" class="img-fluid"
+                            alt="..."></div>
+
                 </div>
                 <div class="modal-body pt-0 pt-md-3 p-0 p-md-3">
-    
+
                     <div class="text-center d-block d-md-none">
                         <div class="state-wrapper"><img src="./src/assets/images/sydney-skyline.svg" class="img-fluid"
                                 alt="..."></div>
 
-                        <div class="logo-wrapper"><img src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp"
-                            class="img-fluid" alt="..."></div>
+                        <div class="logo-wrapper"><img
+                                src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp" class="img-fluid"
+                                alt="..."></div>
                     </div>
-    
+
                     <div class="p-3 p-md-0">
-    
+
                         <h4 class="fw-bold">About Reward Gateway</h4>
-    
-                            <p>Reward Gateway helps companies engage, motivate and retain people – every day, all over the world. Partnering with over
-                            4,000 companies in 23 countries, we empower more than 6.5 million employees to connect, appreciate and support one
+
+                        <p>Reward Gateway helps companies engage, motivate and retain people – every day, all over the
+                            world. Partnering with over
+                            4,000 companies in 23 countries, we empower more than 6.5 million employees to connect,
+                            appreciate and support one
                             another to make the world a better place to work.</p>
-    
-                            <p>Our unified employee engagement hub provides the best of recognition, reward, surveys, benefits and discounts that
-                            support the overall wellbeing of our client’s employees, enriching their talent acquisition, retention and values-driven
+
+                        <p>Our unified employee engagement hub provides the best of recognition, reward, surveys,
+                            benefits and discounts that
+                            support the overall wellbeing of our client’s employees, enriching their talent acquisition,
+                            retention and values-driven
                             growth.</p>
-    
-                            <p class="mb-4">Our clients include American Express, Unilever, Samsung, IBM, McDonald’s and more.</p>
 
-                            <a href="#" class="btn btn-primary mb-4">Learn More About Reward Gateway</a>
+                        <p class="mb-4">Our clients include American Express, Unilever, Samsung, IBM, McDonald’s and
+                            more.</p>
 
-                            <ul class="speaker-details mb-0">
-                                <li class="location">(02) 9112 0100</li>
-                                <li class="phone">engage@rewardgateway.com</li>
-                                <li class="link">rewardgateway.com/au</li>
-                            </ul>
-    
+                        <a href="#" class="btn cta-primary mb-4">Learn More About Reward Gateway</a>
+
+                        <ul class="speaker-details mb-0">
+                            <li class="location">(02) 9112 0100</li>
+                            <li class="phone">engage@rewardgateway.com</li>
+                            <li class="link">rewardgateway.com/au</li>
+                        </ul>
+
                     </div>
-    
-    
+
+
                 </div>
                 <div class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal" aria-label="Close">
                     <div>Back to Sponsors</div>
@@ -2053,202 +2334,507 @@
         </div>
     </div>
 
-    <!-- popup modals START -->
-    <div class="modal fade popup-modal" id="popupModalDefault" tabindex="-1" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Get in Touch modal -->
+    <div class="modal fade become-sponsor-modal" id="contactModal" tabindex="-1" aria-labelledby="sponsorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex flex-column gap-2">
-                        <h2 class="modal-title text-center text-capitalize">Registration is now open</h2>
-                        <div class="modal-blurb">
-                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
-                                game-changing
-                                opportunity—secure your spot now!</p>
-                        </div>
+                <div class="div-rapper scrollable-y">
+                    <div class="modal-header">
+                        <h2 class="mdl-become-sponsor-heading text-gray-900 text-capitalize">Get in Touch</h2>
+                        <p class="blurb text-gray-600 mb-0">Elevate Your Brand with our Sponsorship program! Join us in
+                            making [Event name
+                            goes here] a resounding success by
+                            becoming a sponsor. Your support not only fuels the success of our event but also opens
+                            doors to a world of networking
+                            opportunities, brand recognition, and community engagement. Explore our sponsorship packages
+                            today!</p>
                     </div>
-                    <div class="countdown-container">
-                        <div class="countdown-lbl-container">
-                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
-                        </div>
-                        <div class="timer-countdown-lbl-container text-center">
-                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
-                            <div class="countdown-time-lbl d-block text-center">
-                                <span class="countdown-time-span-lbl">HR</span>
-                                <span class="countdown-time-span-lbl">MIN</span>
-                                <span class="countdown-time-span-lbl">SEC</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popup-partner">
-                        <div class="popup-sponsor-heading-label">
-                            <h4 class="text-center text-uppercase">in partnership with</h4>
-                        </div>
-                        <picture>
-                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-5">
-                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">Register
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade popup-modal" id="popupModalDiscount" tabindex="-1" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex flex-column gap-2">
-                        <h2 class="modal-title text-center text-capitalize">Discount Ending soon</h2>
-                        <div class="modal-blurb">
-                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
-                                game-changing
-                                opportunity—secure your spot now!</p>
-
-                        </div>
-                    </div>
-                    <h3 class="discount-lbl text-center fs-1 text fw-bold my-4">50% Discount</h3>
-                    <div class="countdown-container">
-                        <div class="countdown-lbl-container">
-                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
-                        </div>
-                        <div class="timer-countdown-lbl-container text-center">
-                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
-                            <div class="countdown-time-lbl d-block text-center">
-                                <span class="countdown-time-span-lbl">HR</span>
-                                <span class="countdown-time-span-lbl">MIN</span>
-                                <span class="countdown-time-span-lbl">SEC</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popup-partner">
-                        <div class="popup-sponsor-heading-label">
-                            <h4 class="text-center text-uppercase">in partnership with</h4>
-                        </div>
-                        <picture>
-                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-5">
-                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">Register
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade popup-modal" id="popupModalEvenStartingSoon" tabindex="-1" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex flex-column gap-2">
-                        <h2 class="modal-title text-center text-capitalize">Event starting soon</h2>
-                        <div class="modal-blurb">
-                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
-                                game-changing
-                                opportunity—secure your spot now!</p>
-
-                        </div>
-                    </div>
-                    <div class="countdown-container">
-                        <div class="countdown-lbl-container">
-                            <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
-                        </div>
-                        <div class="timer-countdown-lbl-container text-center">
-                            <span class="countdown-time d-block text-center">04 : 05 : 06</span>
-                            <div class="countdown-time-lbl d-block text-center">
-                                <span class="countdown-time-span-lbl">HR</span>
-                                <span class="countdown-time-span-lbl">MIN</span>
-                                <span class="countdown-time-span-lbl">SEC</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popup-partner">
-                        <div class="popup-sponsor-heading-label">
-                            <h4 class="text-center text-uppercase">in partnership with</h4>
-                        </div>
-                        <picture>
-                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-5">
-                        <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">Register
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade popup-modal" id="popupModalRegInterest" tabindex="-1" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex flex-column gap-2">
-                        <h2 class="modal-title text-center text-capitalize">Event has concluded</h2>
-                        <div class="modal-blurb">
-                            <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on this
-                                game-changing
-                                opportunity—secure your spot now!</p>
-                        </div>
-                    </div>
-                    <div class="form-wrapper">
+                    <div class="modal-body">
                         <form>
-                            <div class="py-4 m-auto">
-                                <div class="reg-interest-wrapper d-flex flex-wrap flex-column gap-2">
-                                    <div>
-                                        <label for="exampleInputEmail1" class="form-label d-none">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="Enter your email">
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <button type="submit" class="btn btn-primary cta-primary">Register Your
-                                            Interest</button>
-                                    </div>
-                                </div>
-
-                                <div id="emailHelp" class="form-text text-center">We'll never share your email with
-                                    anyone else.
+                            <div class="mb-3">
+                                <label for="inquiry" class="form-label">Inquiry</label>
+                                <select class="form-select" id="inquiry">
+                                    <option value="general" selected>General Enquiries</option>
+                                    <option value="registration">Registration Enquiries</option>
+                                    <option value="speaking">Speaking Opportunities</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorFullname" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="sponsorFullname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="sponsorsEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsPhoneNumber" class="form-label">Phone</label>
+                                <div class="become-sponsor-tel-input input-group">
+                                    <select class="form-select" id="countryCode">
+                                        <option selected>CA +1</option>
+                                        <option value="US+1">US +1</option>
+                                        <option value="UK+44">UK +44</option>
+                                    </select>
+                                    <input type="tel" class="form-control" id="sponsorsPhoneNumber">
                                 </div>
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <p class="py-3 text-gray-500">This site is protected by reCAPTCHA and the Google Privacy
+                                    Policy and Terms
+                                    of Service
+                                    apply.</p>
 
+                            </div>
+                            <div class="input-group pb-5">
+                                <div class="ms-auto"><button type="submit" class="btn btn-primary cta-primary">Send
+                                        Message</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
-                    <div class="popup-partner py-2">
-                        <div class="popup-sponsor-heading-label">
-                            <h4 class="text-center text-uppercase">in partnership with</h4>
+                </div>
+                <button type="button" class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <div class="fs-24-responsive">Close</div>
+                    <div class="btn-close"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Become a Sponsor modal -->
+    <div class="modal fade become-sponsor-modal" id="becomeSponsorModal" tabindex="-1"
+        aria-labelledby="sponsorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="div-rapper scrollable-y">
+                    <div class="modal-header">
+                        <h2 class="mdl-become-sponsor-heading text-gray-900 text-capitalize">Become a Sponsor</h2>
+                        <p class="blurb text-gray-600 mb-0">Elevate Your Brand with our Sponsorship program! Join us in
+                            making [Event name
+                            goes here] a resounding success by
+                            becoming a sponsor. Your support not only fuels the success of our event but also opens
+                            doors to a world of networking
+                            opportunities, brand recognition, and community engagement. Explore our sponsorship packages
+                            today!</p>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="sponsorFullname" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="sponsorFullname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="sponsorsEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sponsorsPhoneNumber" class="form-label">Phone</label>
+                                <div class="become-sponsor-tel-input input-group">
+                                    <select class="form-select" id="countryCode">
+                                        <option selected>CA +1</option>
+                                        <option value="US+1">US +1</option>
+                                        <option value="UK+44">UK +44</option>
+                                    </select>
+                                    <input type="tel" class="form-control" id="sponsorsPhoneNumber">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <p class="py-3 text-gray-500">This site is protected by reCAPTCHA and the Google Privacy
+                                    Policy and Terms
+                                    of Service
+                                    apply.</p>
+
+                            </div>
+                            <div class="input-group pb-5">
+                                <div class="ms-auto"><button type="submit" class="btn btn-primary cta-primary">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button type="button" class="modal-footer d-flex justify-content-between" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <div class="fs-24-responsive">Close</div>
+                    <div class="btn-close"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup modals START -->
+    <div class="all-popup-modal-container">
+        <div class="modal fade popup-modal" id="popupModalDefault" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column gap-2">
+                            <h2 class="modal-title text-center text-capitalize">Registration is now open</h2>
+                            <div class="modal-blurb">
+                                <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on
+                                    this
+                                    game-changing
+                                    opportunity—secure your spot now!</p>
+                            </div>
                         </div>
-                        <picture>
-                            <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
-                        </picture>
+                        <div class="countdown-container">
+                            <div class="countdown-lbl-container">
+                                <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                            </div>
+                            <div class="timer-countdown-lbl-container text-center">
+                                <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                                <div class="countdown-time-lbl d-block text-center">
+                                    <span class="countdown-time-span-lbl">HR</span>
+                                    <span class="countdown-time-span-lbl">MIN</span>
+                                    <span class="countdown-time-span-lbl">SEC</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-partner">
+                            <div class="popup-sponsor-heading-label">
+                                <h4 class="text-center text-uppercase">in partnership with</h4>
+                            </div>
+                            <picture>
+                                <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-5">
+                            <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade popup-modal" id="popupModalDiscount" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column gap-2">
+                            <h2 class="modal-title text-center text-capitalize">Discount Ending soon</h2>
+                            <div class="modal-blurb">
+                                <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on
+                                    this
+                                    game-changing
+                                    opportunity—secure your spot now!</p>
+
+                            </div>
+                        </div>
+                        <h3 class="discount-lbl text-center fs-1 text fw-bold my-4">50% Discount</h3>
+                        <div class="countdown-container">
+                            <div class="countdown-lbl-container">
+                                <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                            </div>
+                            <div class="timer-countdown-lbl-container text-center">
+                                <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                                <div class="countdown-time-lbl d-block text-center">
+                                    <span class="countdown-time-span-lbl">HR</span>
+                                    <span class="countdown-time-span-lbl">MIN</span>
+                                    <span class="countdown-time-span-lbl">SEC</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-partner">
+                            <div class="popup-sponsor-heading-label">
+                                <h4 class="text-center text-uppercase">in partnership with</h4>
+                            </div>
+                            <picture>
+                                <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-5">
+                            <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade popup-modal" id="popupModalEvenStartingSoon" tabindex="-1" aria-hidden="true"
+            role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column gap-2">
+                            <h2 class="modal-title text-center text-capitalize">Event starting soon</h2>
+                            <div class="modal-blurb">
+                                <p>Experience the transformative power of HR at the Melbourne Summit. Don’t miss out on
+                                    this
+                                    game-changing
+                                    opportunity—secure your spot now!</p>
+
+                            </div>
+                        </div>
+                        <div class="countdown-container">
+                            <div class="countdown-lbl-container">
+                                <h3 class="countdown-label text-center text-uppercase">Registration ends in</h3>
+                            </div>
+                            <div class="timer-countdown-lbl-container text-center">
+                                <span class="countdown-time d-block text-center">04 : 05 : 06</span>
+                                <div class="countdown-time-lbl d-block text-center">
+                                    <span class="countdown-time-span-lbl">HR</span>
+                                    <span class="countdown-time-span-lbl">MIN</span>
+                                    <span class="countdown-time-span-lbl">SEC</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-partner">
+                            <div class="popup-sponsor-heading-label">
+                                <h4 class="text-center text-uppercase">in partnership with</h4>
+                            </div>
+                            <picture>
+                                <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-5">
+                            <a href="#" class="btn btn-primary cta-primary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade popup-modal" id="popupModalRegInterest" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close popup-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column gap-2">
+                            <h2 class="modal-title text-center text-capitalize">Event has concluded</h2>
+                            <div class="modal-blurb">
+                                <p>We want to give a big thanks to everyone who joined us this year. Get ready to dive
+                                    into
+                                    the world of HR's powerful
+                                    impact at next year's Melbourne Summit. Don't pass up the chance to be part of this
+                                    game-changer—register your interest
+                                    today!</p>
+                            </div>
+                        </div>
+                        <div class="form-wrapper">
+                            <form>
+                                <div class="py-4 m-auto">
+                                    <div class="reg-interest-wrapper d-flex flex-wrap flex-column gap-2">
+                                        <div>
+                                            <label for="exampleInputEmail1" class="form-label d-none">Email
+                                                address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Enter your email">
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button type="submit" class="btn btn-primary cta-primary">Register Your
+                                                Interest</button>
+                                        </div>
+                                    </div>
+
+                                    <div id="emailHelp" class="form-text text-center">We'll never share your email with
+                                        anyone else.
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="popup-partner py-2">
+                            <div class="popup-sponsor-heading-label">
+                                <h4 class="text-center text-uppercase">in partnership with</h4>
+                            </div>
+                            <picture>
+                                <img src="/src/assets/images/sponsor-wealhouse.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- popup modals END -->
+
+
+    <!-- Cookie -->
+    <div class="cookie d-none">
+        <div class="p-3" style="border-bottom: 1px solid #EBEBEB;">
+
+            <div class="close ms-auto">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                        <path d="M18 6L6 18" stroke="#273240" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="#273240" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+        <div class="front">
+            <p>We use third-party cookies in order to improve your site experience and deliver personalised content.
+                By
+                using HRD
+                Summit, you <a href="">agree to our website privacy and terms</a>. Cookies help us track user
+                interests,
+                share articles on social
+                media, and deliver tailored content, and ads, among other benefits.</p>
+
+
+
+
+
+            <div class="back" style="border-top: 1px solid #EBEBEB;">
+                <!-- <div class="back_icons">
+                        <i class="fas fa-arrow-left back_icon"></i>
+                    </div>
+                    <h1>Manage Consent Preferences</h1> -->
+
+                <form>
+                    <ul class="tab">
+                        <li>
+                            <h2>Necessary</h2>
+                            <!-- <span class="baged">Always Active</span> -->
+                        </li>
+                        <div class="data2">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and
+                                statistics on use of our
+                                services by you and other visitors. This information helps us to improve our
+                                services
+                                and products for the benefit of
+                                you and others.</p>
+                        </div>
+
+                        <li>
+                            <h2>Functional</h2>
+                            <label class="custom_checkbox">
+                                <input type="checkbox">
+                                <span class="toogle"></span>
+                            </label>
+
+                        </li>
+                        <div class="data2 active">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and
+                                statistics on use of our services by you and other visitors. This information helps
+                                us
+                                to
+                                improve our services and products for the benefit of you and others.</p>
+                        </div>
+
+                        <li>
+                            <h2>Marketing</h2>
+                            <label class="custom_checkbox">
+                                <input type="checkbox">
+                                <span class="toogle"></span>
+                            </label>
+
+                        </li>
+                        <div class="data2">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and
+                                statistics on use of our services by you and other visitors. This information helps
+                                us
+                                to
+                                improve our services and products for the benefit of you and others.</p>
+                        </div>
+
+                    </ul>
+
+                </form>
+
+            </div>
+
+            <p>We use third-party cookies in order to improve your site experience and deliver personalised content.
+                By using HRD
+                Summit, you <a href="">agree to our website privacy and terms</a>. Cookies help us track user
+                interests, share articles on social
+                media, and deliver tailored content, and ads, among other benefits.</p>
+
+            <div class="back" style="border-top: 1px solid #EBEBEB;">
+                <form>
+                    <ul class="tab">
+                        <li>
+                            <h2>Necessary</h2>
+                        </li>
+                        <div class="data2">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and statistics on use of our
+                                services by you and other visitors. This information helps us to improve our
+                                services and products for the benefit of
+                                you and others.</p>
+                        </div>
+
+                        <li>
+                            <h2>Functional</h2>
+                            <label class="custom_checkbox">
+                                <input type="checkbox">
+                                <span class="toogle"></span>
+                            </label>
+
+                        </li>
+                        <div class="data2 active">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and
+                                statistics on use of our services by you and other visitors. This information helps
+                                us to
+                                improve our services and products for the benefit of you and others.</p>
+                        </div>
+
+                        <li>
+                            <h2>Marketing</h2>
+                            <label class="custom_checkbox">
+                                <input type="checkbox">
+                                <span class="toogle"></span>
+                            </label>
+
+                        </li>
+                        <div class="data2">
+                            <p>These cookies allow us or our third-party analytics providers to collect information
+                                and
+                                statistics on use of our services by you and other visitors. This information helps
+                                us to
+                                improve our services and products for the benefit of you and others.</p>
+                        </div>
+
+                    </ul>
+                </form>
+            </div>
+
+            <div class="front__buttons">
+                <div class="front__footer mb-0">
+                    <a href="#" id="more_cookie">Manage</a>
+                    <a href="#" class="save-cookie">Save Preferences</a>
+                </div>
+                <button>Accept All Cookies</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- floating back to top button -->
     <div class="btn-back-to-top" aria-label="Back to top button">
